@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 import CharacterDetails from "./pages/CharacterDetails";
 import "./App.css";
 import Author from "./components/Author";
-import Header from "./components/header/Header";
+import Header from "./components/Header/Header";
 
 const authorName = "Matt Abraham Groegning";
 const authorBirthDate = "15 février 1954";
@@ -11,31 +11,15 @@ const authorBirthDate = "15 février 1954";
 function App() {
   return (
     <>
-    <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route
-          path="/characters/:id"
-          element={<CharacterDetails />}
-        />
-      </Routes>
-    </BrowserRouter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/characters/:id" element={<CharacterDetails />} />
+        </Routes>
+      </BrowserRouter>
       <section>
-        <Author
-          mattSrc="/MattGroening.jpg"
-          name={authorName}
-          birthDate={authorBirthDate}
-        />
-        <p>
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
-          molestias culpa, numquam quas odio adipisci repudiandae quidem
-          voluptatibus aliquam, nobis officia totam veritatis est tenetur
-          accusamus tempore, corrupti dolor velit? Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Quaerat ratione veritatis cumque odio
-          aliquam possimus asperiores, nostrum, adipisci eaque illo, ducimus
-          dignissimos deleniti quos. Fuga rerum error quisquam cumque esse!"
-        </p>
+        <Author />
       </section>
     </>
   );
