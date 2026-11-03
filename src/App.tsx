@@ -1,6 +1,6 @@
 import "./App.css";
 
-import Author from "./Components/Author";
+import Author from "./components/Author";
 
 function App() {
   return (
