@@ -7,10 +7,9 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Route de la page d'accueil (le carrousel) */}
+        
         <Route path="/" element={<Characters />} />
         
-        {/* Route de la page dédiée au personnage */}
         <Route path="/character/:id" element={<CharacterDetail />} />
       </Routes>
     </BrowserRouter>

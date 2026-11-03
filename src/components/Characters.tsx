@@ -6,7 +6,7 @@ interface CharacterData {
   id: number;
   name: string;
   role: string;
-  image: string; // Nom du fichier image renvoyé par l'API (ex: "homer.png")
+  img: string; 
   description: string;
 }
 
@@ -38,8 +38,8 @@ export default function Characters() {
     setCurrentIndex((prev) => (prev === 0 ? characters.length - 1 : prev - 1));
   };
 
-  if (loading) return <div>Chargement...</div>;
-  if (characters.length === 0) return <div>Aucun personnage.</div>;
+  if (loading) return <div className="characters-carousel">Chargement...</div>;
+  if (characters.length === 0) return <div className="characters-carousel">Aucun personnage.</div>;
 
   const currentCharacter = characters[currentIndex];
 
@@ -47,12 +47,12 @@ export default function Characters() {
     <div className="characters-carousel">
       <h2>Galerie des Personnages de Springfield</h2>
 
+      {/* Le Link prend toute la largeur et hérite du style */}
       <Link to={`/character/${currentCharacter.id}`} className="character-link-card">
         <div className="character-card">
-          {/* Utilisation du dossier public/img/ en combinant le chemin et la donnée de l'API */}
-         <img 
-            src={`/img/${currentCharacter.image}`} 
-            alt={currentCharacter.name} 
+          <img 
+            src={`/img/${currentCharacter.img}`} 
+            alt={currentCharacter.name}
           />
           <h3>{currentCharacter.name}</h3>
           <p className="role"><strong>Rôle :</strong> {currentCharacter.role}</p>
