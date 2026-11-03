@@ -1,0 +1,19 @@
+/* Permet d'enlever le soulignement et les couleurs par défaut des liens sur les cartes */
+.character-link-card {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.character-link-card:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.details-hint {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #0056b3;
+  font-weight: bold;
+}
