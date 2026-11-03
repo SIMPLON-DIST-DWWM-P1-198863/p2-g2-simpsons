@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home"; 
-import CharacterDetails from "./Pages/CharacterDetails";
+import Home from "./pages/Home"; 
+import CharacterDetails from "./pages/CharacterDetails";
 import "./App.css";
-import Author from "./Components/Author";
-import Header from "./Components/Header/Header";
+import Author from "./components/Author";
+import Header from "./components/header/Header";
 
 const authorName = "Matt Abraham Groegning";
 const authorBirthDate = "15 février 1954";
