@@ -1,8 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home"; 
 import CharacterDetails from "./Pages/CharacterDetails";
 import "./App.css";
 import Author from "./Components/Author";
+import Header from "./Components/Header/Header";
 
 const authorName = "Matt Abraham Groegning";
 const authorBirthDate = "15 février 1954";
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
