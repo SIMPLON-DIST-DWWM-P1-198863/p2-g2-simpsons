@@ -38,33 +38,60 @@ export default function Characters() {
     setCurrentIndex((prev) => (prev === 0 ? characters.length - 1 : prev - 1));
   };
 
-  if (loading) return <div className="characters-carousel">Chargement...</div>;
-  if (characters.length === 0) return <div className="characters-carousel">Aucun personnage.</div>;
+  if (loading) return <div className="characters-carousel-container">Chargement...</div>;
+  if (characters.length === 0) return <div className="characters-carousel-container">Aucun personnage.</div>;
 
-  const currentCharacter = characters[currentIndex];
+  // Calcul des index pour afficher 3 cartes (Précédent, Actif, Suivant)
+  const prevIndex = (currentIndex - 1 + characters.length) % characters.length;
+  const nextIndex = (currentIndex + 1) % characters.length;
+
+  const leftCharacter = characters[prevIndex];
+  const centerCharacter = characters[currentIndex];
+  const rightCharacter = characters[nextIndex];
 
   return (
-    <div className="characters-carousel">
+    <div className="characters-carousel-container">
       <h2>Galerie des Personnages de Springfield</h2>
 
-      {/* Le Link prend toute la largeur et hérite du style */}
-      <Link to={`/character/${currentCharacter.id}`} className="character-link-card">
-        <div className="character-card">
-          <img 
-            src={`/img/${currentCharacter.img}`} 
-            alt={currentCharacter.name}
-          />
-          <h3>{currentCharacter.name}</h3>
-          <p className="role"><strong>Rôle :</strong> {currentCharacter.role}</p>
-          <p>{currentCharacter.description}</p>
-          <span className="details-hint">🔍 Cliquez pour voir sa fiche complète</span>
-        </div>
-      </Link>
+      <div className="carousel-wrapper">
+        {/* Bouton Précédent */}
+        <button className="carousel-arrow" onClick={prevCharacter}>
+          ◀
+        </button>
 
-      <div className="carousel-buttons">
-        <button onClick={prevCharacter}>◀ Précédent</button>
+        <div className="carousel-track">
+          {/* 1. Carte de gauche (Simple / Latérale) */}
+          <Link to={`/character/${leftCharacter.id}`} className="character-card side-card">
+            <img src={`/img/${leftCharacter.img}`} alt={leftCharacter.name} />
+            <h3>{leftCharacter.name}</h3>
+            <p className="card-sub">{leftCharacter.role}</p>
+          </Link>
+
+          {/* 2. Carte centrale (Active / Détaillée avec le grand fond jaune) */}
+          <Link to={`/character/${centerCharacter.id}`} className="character-card active-card">
+            <img src={`/img/${centerCharacter.img}`} alt={centerCharacter.name} />
+            <h3>{centerCharacter.name}</h3>
+            <p className="role"><strong>Rôle :</strong> {centerCharacter.role}</p>
+            <p className="description">{centerCharacter.description}</p>
+            <span className="details-hint">🔍 Cliquez pour voir sa fiche complète</span>
+          </Link>
+
+          {/* 3. Carte de droite (Simple / Latérale) */}
+          <Link to={`/character/${rightCharacter.id}`} className="character-card side-card">
+            <img src={`/img/${rightCharacter.img}`} alt={rightCharacter.name} />
+            <h3>{rightCharacter.name}</h3>
+            <p className="card-sub">{rightCharacter.role}</p>
+          </Link>
+        </div>
+
+        {/* Bouton Suivant */}
+        <button className="carousel-arrow" onClick={nextCharacter}>
+          ▶
+        </button>
+      </div>
+
+      <div className="carousel-indicators">
         <span>{currentIndex + 1} / {characters.length}</span>
-        <button onClick={nextCharacter}>Suivant ▶</button>
       </div>
     </div>
   );
