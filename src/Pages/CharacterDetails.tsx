@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getCharacters } from "../Services/characters";
@@ -19,7 +18,7 @@ function CharacterDetails() {
     getCharacters()
       .then((characters) => {
         const found = characters.find(
-          (item) => item.id === Number(id)
+          (item: Character) => item.id === Number(id),
         );
 
         setCharacter(found ?? null);
@@ -56,14 +55,12 @@ function CharacterDetails() {
 
       <ul>
         {Object.entries(character)
-          .filter(([key, value]) =>
-            !excluded.includes(key) && value !== undefined
+          .filter(
+            ([key, value]) => !excluded.includes(key) && value !== undefined,
           )
           .map(([key, value]) => (
             <li key={key}>
-              <strong>
-                {key.charAt(0).toUpperCase() + key.slice(1)} :
-              </strong>{" "}
+              <strong>{key.charAt(0).toUpperCase() + key.slice(1)} :</strong>{" "}
               {Array.isArray(value) ? value.join(", ") : value}
             </li>
           ))}
