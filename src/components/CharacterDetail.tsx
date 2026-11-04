@@ -10,10 +10,10 @@ export default function CharacterDetail() {
   useEffect(() => {
     // Ici, vous pouvez faire un fetch spécifique pour un personnage, 
     // ou filtrer votre liste globale selon l'ID
-    fetch(`https://api.exemple.com/simpsons/characters/${id}`)
+    fetch(`https://materiel-apprentissage.github.io/api/simpsons.json`)
       .then((res) => res.json())
       .then((data) => {
-        setCharacter(data);
+        setCharacter(data[Number(id) -1]);
         setLoading(false);
       })
       .catch((err) => {
