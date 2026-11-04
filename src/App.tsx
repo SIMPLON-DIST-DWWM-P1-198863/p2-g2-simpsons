@@ -1,11 +1,12 @@
 import "./App.css";
-
-import Author from "./Components/Author";
+import Footer from "./components/Footer";
+import Author from "./components/Author";
 
 function App() {
   return (
     <>
       <Author />
+      <Footer />
     </>
   );
 }
