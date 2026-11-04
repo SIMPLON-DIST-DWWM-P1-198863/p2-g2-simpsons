@@ -15,7 +15,6 @@ function Header() {
         <nav className="header-nav">
           <Link to="/">Accueil</Link>
           <Link to="/characters">Personnages</Link>
-          <Link to="/episodes">Épisodes</Link>
           <Link to="/about">À propos</Link>
         </nav>
 
