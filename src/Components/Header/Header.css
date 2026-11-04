@@ -1,65 +1,173 @@
+/* ===== HEADER SIMPSONS ===== */
+
 .header {
   background-color: #ffd90f;
   border-bottom: 4px solid #000;
-  padding: 15px 30px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 15px 25px;
+  position: relative;
+  z-index: 100;
 }
 
 .header-container {
   max-width: 1500px;
   margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 25px;
 }
 
+/* LOGO GAUCHE */
+
 .header-logo img {
-  height: auto;
-  width: 100px;
   display: block;
+  width: 130px;
+  height: auto;
   object-fit: contain;
 }
+
+/* LOGO CENTRAL */
+
+.header-title {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.header-title img {
+  display: block;
+  width: 260px;
+  max-width: 100%;
+  height: 65px;
+  object-fit: contain;
+}
+
+/* NAVIGATION */
 
 .header-nav {
   display: flex;
   align-items: center;
-  gap: 20px;
-}
-
-.header-nav a {
-  color: #000;
-  font-weight: bold;
-  text-decoration: none;
-  transition: color 0.2s ease;
+  gap: 25px;
   white-space: nowrap;
 }
 
-.header-nav a:hover {
+.header-nav a,
+.about-button {
+  color: #000;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-nav > a:hover,
+.about-button:hover {
   color: #009ddc;
 }
 
-.header-search {
-  width: 100%;
-  max-width: 350px;
+/* BOUTON ABOUT */
+
+.about-menu {
+  position: relative;
 }
 
-/* TABLETTES */
+.about-button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.about-arrow {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+/* MENU DÉROULANT */
+
+.about-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+  min-width: 210px;
+  padding: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.2s ease;
+}
+
+/* OUVERTURE AU SURVOL SUR DESKTOP */
+
+.about-menu:hover .about-dropdown,
+.about-menu:focus-within .about-dropdown,
+.about-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.about-menu:hover .about-arrow,
+.about-menu:focus-within .about-arrow,
+.about-dropdown.open ~ .about-button .about-arrow {
+  transform: rotate(180deg);
+}
+
+.about-dropdown a {
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.about-dropdown a:hover {
+  background-color: #fff3a6;
+  color: #000;
+}
+
+/* RECHERCHE */
+
+.header-search {
+  width: 280px;
+  flex-shrink: 0;
+}
+
+/* ===== TABLETTES ===== */
+
 @media (max-width: 1100px) {
   .header-container {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 18px;
+  }
+
+  .header-title {
+    flex: 1;
   }
 
   .header-search {
     max-width: 500px;
+    width: 100%;
   }
 }
 
-/* MOBILES */
-@media (max-width: 500px) {
+/* ===== MOBILES ===== */
+
+@media (max-width: 600px) {
   .header {
     padding: 15px;
   }
@@ -69,13 +177,52 @@
     gap: 15px;
   }
 
+  .header-logo img {
+    width: 110px;
+  }
+
+  .header-title img {
+    width: 230px;
+    height: 55px;
+  }
+
   .header-nav {
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 30px;
   }
 
   .header-search {
+    width: 100%;
     max-width: 100%;
+  }
+
+  /* Dropdown mobile */
+
+  .about-dropdown {
+    position: static;
+    display: none;
+
+    min-width: 200px;
+    margin-top: 8px;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .about-dropdown.open {
+    display: flex;
+  }
+
+  /* Désactivation du survol sur mobile */
+
+  .about-menu:hover .about-dropdown,
+  .about-menu:focus-within .about-dropdown {
+    display: none;
+  }
+
+  .about-menu .about-dropdown.open {
+    display: flex;
   }
 }
