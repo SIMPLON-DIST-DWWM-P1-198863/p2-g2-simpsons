@@ -1,7 +1,7 @@
 import { useEffect, useState, type ChangeEvent } from "react";
 import { Link } from "react-router-dom";
-import { getCharacters } from "../Services/characters";
-import type { Character } from "../Types/Character";
+import { getCharacters } from "../services/characters";
+import type { Character } from "../types/Character";
 import "./SearchBar.css";
 
 function SearchBar() {
@@ -17,7 +17,7 @@ function SearchBar() {
 
   const results = characters
     .filter((character) =>
-      character.name.toLowerCase().includes(search.trim().toLowerCase())
+      character.name.toLowerCase().includes(search.trim().toLowerCase()),
     )
     .slice(0, 8);
 
@@ -59,19 +59,14 @@ function SearchBar() {
       </div>
 
       {error && (
-        <p className="search-error">
-          Impossible de charger les personnages.
-        </p>
+        <p className="search-error">Impossible de charger les personnages.</p>
       )}
 
       {search.trim() !== "" && !error && (
         <ul className="search-results">
           {results.map((character) => (
             <li key={character.id}>
-              <Link
-                to={`/characters/${character.id}`}
-                onClick={clearSearch}
-              >
+              <Link to={`/characters/${character.id}`} onClick={clearSearch}>
                 <span className="result-icon" aria-hidden="true">
                   👤
                 </span>
@@ -81,9 +76,7 @@ function SearchBar() {
           ))}
 
           {results.length === 0 && (
-            <li className="no-results">
-              Aucun personnage trouvé 😕
-            </li>
+            <li className="no-results">Aucun personnage trouvé 😕</li>
           )}
         </ul>
       )}
