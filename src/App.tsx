@@ -1,18 +1,22 @@
-import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Characters from "./components/Characters";
-import CharacterDetail from "./components/CharacterDetail";
+import Home from "./pages/Home";
+import CharacterDetails from "./pages/CharacterDetails";
+import "./App.css";
+import Author from "./components/Author";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        
-        <Route path="/" element={<Characters />} />
-        
-        <Route path="/character/:id" element={<CharacterDetail />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/characters/:id" element={<CharacterDetails />} />
+        </Routes>
+      </BrowserRouter>
+      <section>
+        <Author />
+      </section>
+    </>
   );
 }
 
