@@ -6,7 +6,7 @@ interface CharacterData {
   id: number;
   name: string;
   role: string;
-  img: string; 
+  img: string;
   description: string;
 }
 
@@ -38,8 +38,12 @@ export default function Characters() {
     setCurrentIndex((prev) => (prev === 0 ? characters.length - 1 : prev - 1));
   };
 
-  if (loading) return <div className="characters-carousel-container">Chargement...</div>;
-  if (characters.length === 0) return <div className="characters-carousel-container">Aucun personnage.</div>;
+  if (loading)
+    return <div className="characters-carousel-container">Chargement...</div>;
+  if (characters.length === 0)
+    return (
+      <div className="characters-carousel-container">Aucun personnage.</div>
+    );
 
   // Calcul des index pour afficher 3 cartes (Précédent, Actif, Suivant)
   const prevIndex = (currentIndex - 1 + characters.length) % characters.length;
@@ -53,7 +57,7 @@ export default function Characters() {
     <div className="characters-carousel-container">
       <h2>Galerie des Personnages de Springfield</h2>
 
-      <div className="carousel-wrapper">
+      <div id="personnages" className="carousel-wrapper">
         {/* Bouton Précédent */}
         <button className="carousel-arrow" onClick={prevCharacter}>
           ◀
@@ -61,23 +65,42 @@ export default function Characters() {
 
         <div className="carousel-track">
           {/* 1. Carte de gauche (Simple / Latérale) */}
-          <Link to={`/character/${leftCharacter.id}`} className="character-card side-card">
-            <img src={`/img/${leftCharacter.img}`} alt={leftCharacter.name} />
+          <Link
+            to={`/character/${leftCharacter.id}`}
+            className="character-card side-card"
+          >
+            <img
+              src={`/public/img/${leftCharacter.img}`}
+              alt={leftCharacter.name}
+            />
             <h3>{leftCharacter.name}</h3>
             <p className="card-sub">{leftCharacter.role}</p>
           </Link>
 
           {/* 2. Carte centrale (Active / Détaillée avec le grand fond jaune) */}
-          <Link to={`/character/${centerCharacter.id}`} className="character-card active-card">
-            <img src={`/img/${centerCharacter.img}`} alt={centerCharacter.name} />
+          <Link
+            to={`/character/${centerCharacter.id}`}
+            className="character-card active-card"
+          >
+            <img
+              src={`/img/${centerCharacter.img}`}
+              alt={centerCharacter.name}
+            />
             <h3>{centerCharacter.name}</h3>
-            <p className="role"><strong>Rôle :</strong> {centerCharacter.role}</p>
+            <p className="role">
+              <strong>Rôle :</strong> {centerCharacter.role}
+            </p>
             <p className="description">{centerCharacter.description}</p>
-            <span className="details-hint">🔍 Cliquez pour voir sa fiche complète</span>
+            <span className="details-hint">
+              🔍 Cliquez pour voir sa fiche complète
+            </span>
           </Link>
 
           {/* 3. Carte de droite (Simple / Latérale) */}
-          <Link to={`/character/${rightCharacter.id}`} className="character-card side-card">
+          <Link
+            to={`/character/${rightCharacter.id}`}
+            className="character-card side-card"
+          >
             <img src={`/img/${rightCharacter.img}`} alt={rightCharacter.name} />
             <h3>{rightCharacter.name}</h3>
             <p className="card-sub">{rightCharacter.role}</p>
@@ -89,9 +112,10 @@ export default function Characters() {
           ▶
         </button>
       </div>
-
       <div className="carousel-indicators">
-        <span>{currentIndex + 1} / {characters.length}</span>
+        <span>
+          {currentIndex + 1} / {characters.length}
+        </span>
       </div>
     </div>
   );
