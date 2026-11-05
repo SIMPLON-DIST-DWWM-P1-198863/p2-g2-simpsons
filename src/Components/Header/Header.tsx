@@ -15,12 +15,12 @@ function Header() {
       <div className="header-container">
         {/* Logo gauche */}
         <Link to="/" className="header-logo">
-          <img src="/public/homer.png" alt="Logo Homer" />
+          <img src="/homer.png" alt="Logo Homer" />
         </Link>
 
         {/* Logo central */}
         <Link to="/" className="header-title">
-          <img src="/public/theSimpsons.png" alt="Les Simpson" />
+          <img src="/theSimpsons.png" alt="Les Simpsons" />
         </Link>
 
         {/* Navigation */}
@@ -32,7 +32,8 @@ function Header() {
               type="button"
               className={`about-button ${isAboutOpen ? "active" : ""}`}
               aria-expanded={isAboutOpen}
-              onClick={() => setIsAboutOpen(!isAboutOpen)}>
+              onClick={() => setIsAboutOpen(!isAboutOpen)}
+            >
               About <span className="about-arrow">⌄</span>
             </button>
 

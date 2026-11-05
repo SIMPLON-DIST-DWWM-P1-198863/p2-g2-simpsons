@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import Footer from "./components/Footer";
@@ -11,13 +11,12 @@ function App() {
   return (
     <>
       <Header />
+
+      <Routes>
+        <Route path="/" element={<Characters />} />
+        <Route path="/character/:id" element={<CharacterDetail />} />
+      </Routes>
       <Author />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Characters />} />
-          <Route path="/character/:id" element={<CharacterDetail />} />
-        </Routes>
-      </BrowserRouter>
       <Footer />
     </>
   );
