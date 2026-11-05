@@ -17,7 +17,7 @@ function CharacterDetails() {
 
     getCharacters()
       .then((characters) => {
-        const found = characters.find((item) => item.id === Number(id));
+        const found = characters.find((item:Character) => item.id === Number(id));
 
         setCharacter(found ?? null);
       })

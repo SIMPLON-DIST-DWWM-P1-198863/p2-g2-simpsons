@@ -1,7 +1,5 @@
-import "./Author.css";
-import "./reset.css";
-
 import { useState } from "react";
+import "./Author.css";
 
 export default function Author() {
   const [ouvert, setOuvert] = useState(false);
