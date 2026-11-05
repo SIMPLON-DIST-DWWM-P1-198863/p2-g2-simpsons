@@ -86,10 +86,6 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> ff2ddd69ec4c769b41bfa587551cbac035da55af
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -104,39 +100,24 @@ nav,
 section {
   display: block;
 }
-<<<<<<< HEAD
 
 body {
   line-height: 1;
 }
 
-=======
-body {
-  line-height: 1;
-}
->>>>>>> ff2ddd69ec4c769b41bfa587551cbac035da55af
 ol,
 ul {
   list-style: none;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> ff2ddd69ec4c769b41bfa587551cbac035da55af
 blockquote,
 q {
   quotes: none;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> ff2ddd69ec4c769b41bfa587551cbac035da55af
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-<<<<<<< HEAD
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -144,12 +125,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-=======
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
->>>>>>> ff2ddd69ec4c769b41bfa587551cbac035da55af
