@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import "./Header.css";
 
 function Header() {
