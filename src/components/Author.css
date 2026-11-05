@@ -7,8 +7,8 @@
 }
 .carte-conteneur {
   position: relative;
-  padding-bottom: 4rem;
-  padding-top: 1rem;
+  padding-bottom: 8rem;
+  padding-top: 2rem;
   cursor: pointer;
   color: black;
 }
@@ -22,7 +22,7 @@
   height: auto;
   margin-left: 2rem;
   margin-right: 1rem;
-  margin-top: 4.5rem;
+  margin-top: 1.5rem;
   border-radius: 1em;
 }
 
@@ -35,7 +35,8 @@
   text-align: justify;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  --webkit-line-clamp: 6;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
   overflow: hidden;
 }
 .description.ouverte {
@@ -57,17 +58,6 @@
   text-align: center;
 }
 
-.stats span {
-  display: inline-block;
-  min-width: 135px;
-  margin: 1.5rem 1.5rem 0 4rem;
-  padding: 0.6rem 1rem;
-  background: #d9d9d9;
-  color: #222;
-  text-align: center;
-  font-family: Tahoma, Verdana, Geneva, sans-serif;
-}
-
 @keyframes fleche {
   from {
     opacity: 25;
@@ -81,8 +71,8 @@
 
 .fleche {
   position: absolute;
-  right: 1.5rem;
-  bottom: 4rem;
+  right: 2rem;
+  bottom: 3rem;
   width: 50px;
   height: 25px;
   background: #d9d9d9;
@@ -92,4 +82,39 @@
 }
 .fleche.ouverte {
   transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .carte-conteneur {
+    padding-bottom: 3rem;
+  }
+
+  .nameBirth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .imgmatt {
+    float: left;
+    width: 8rem;
+    margin: 1rem 1rem 0.5rem 2rem;
+  }
+
+  .description {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: smaller;
+  }
+
+  .fleche {
+    clear: both;
+    bottom: 1rem;
+    width: 40px;
+    height: 20px;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+  }
 }
