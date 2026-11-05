@@ -1,25 +1,23 @@
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import CharacterDetails from "./pages/CharacterDetails";
-
-import Author from "./components/Author";
-import Header from "./components/header/Header";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
+import Footer from "./components/Footer";
+import Author from "./components/Author";
+import Characters from "./pages/Characters";
+import CharacterDetail from "./components/CharacterDetail";
+
 
 function App() {
   return (
     <>
-      <Header />
-
+      <Author />
+      <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/characters/:id" element={<CharacterDetails />} />
+        <Route path="/" element={<Characters />} />
+        <Route path="/character/:id" element={<CharacterDetail />} />
       </Routes>
-
-      <section>
-        <Author />
-      </section>
+    </BrowserRouter>
+    <Footer />
     </>
   );
 }
