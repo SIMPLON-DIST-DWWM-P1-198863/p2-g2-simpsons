@@ -1,7 +1,7 @@
 import { useEffect, useState, type ChangeEvent } from "react";
 import { Link } from "react-router-dom";
-import { getCharacters } from "../services/characters";
-import type { Character } from "../types/Character";
+import { getCharacters } from "../../services/characters";
+import type { Character } from "../../types/Character";
 import "./SearchBar.css";
 
 function SearchBar() {
@@ -66,7 +66,7 @@ function SearchBar() {
         <ul className="search-results">
           {results.map((character) => (
             <li key={character.id}>
-              <Link to={`/characters/${character.id}`} onClick={clearSearch}>
+              <Link to={`/character/${character.id}`} onClick={clearSearch}>
                 <span className="result-icon" aria-hidden="true">
                   👤
                 </span>

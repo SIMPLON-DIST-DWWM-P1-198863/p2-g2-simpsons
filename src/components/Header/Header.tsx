@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import "./Header.css";
 
 function Header() {
@@ -32,7 +32,8 @@ function Header() {
               type="button"
               className={`about-button ${isAboutOpen ? "active" : ""}`}
               aria-expanded={isAboutOpen}
-              onClick={() => setIsAboutOpen(!isAboutOpen)}>
+              onClick={() => setIsAboutOpen(!isAboutOpen)}
+            >
               About <span className="about-arrow">⌄</span>
             </button>
 
