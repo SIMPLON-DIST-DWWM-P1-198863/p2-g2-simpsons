@@ -3,7 +3,7 @@ export interface Character {
   name: string;
   img: string;
   description: string;
-  age?: number | string;
+  age: number;
   occupation?: string;
   spouse?: string;
   children?: string[];
