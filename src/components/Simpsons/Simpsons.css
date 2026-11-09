@@ -1,0 +1,56 @@
+.container {
+  background-color: #d9d9d9;
+  margin: 2rem 0 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.description-simpson {
+  padding: 2rem 0 2rem 8rem;
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+.saisonsepisodes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+.simsponsfamily {
+  width: 100%;
+}
+.regroupement {
+  padding: 2rem 8rem 2rem 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .simsponsfamily {
+    order: -1;
+  }
+
+  .description-simpson {
+    padding: 1rem;
+    font-size: 15px;
+    order: 1;
+  }
+
+  .regroupement {
+    padding: 0 1rem 1rem;
+  }
+
+  span .saisonsepisodes {
+    flex-direction: column;
+    gap: 0.5rem;
+    order: 0;
+  }
+}

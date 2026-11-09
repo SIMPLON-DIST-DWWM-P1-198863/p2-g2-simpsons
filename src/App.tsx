@@ -12,10 +12,12 @@ function App() {
       <Header />
       <Banner />
       <Author />
+
       <Routes>
         <Route path="/" element={<Characters />} />
         <Route path="/character/:id" element={<CharacterDetail />} />
       </Routes>
+      <Author />
       <Footer />
     </>
   );
