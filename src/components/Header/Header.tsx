@@ -32,8 +32,7 @@ function Header() {
               type="button"
               className={`about-button ${isAboutOpen ? "active" : ""}`}
               aria-expanded={isAboutOpen}
-              onClick={() => setIsAboutOpen(!isAboutOpen)}
-            >
+              onClick={() => setIsAboutOpen(!isAboutOpen)}>
               About <span className="about-arrow">⌄</span>
             </button>
 
