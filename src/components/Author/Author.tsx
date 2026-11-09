@@ -18,7 +18,6 @@ export default function Author() {
             <h3 className="birthDate">Né le {birthDate}</h3>
           </div>
           <img src={mattSrc} alt={name} className="imgmatt" />
-          ''
           <p className={`description ${ouvert ? "ouverte" : ""}`}>
             {description}
           </p>
