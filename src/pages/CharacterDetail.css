@@ -2,17 +2,15 @@
 .character-detail-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Répartit : bouton retour en haut, carte au milieu, flèches tout en bas */
   align-items: center;
   width: 100%;
   min-height: calc(100vh - 160px);
   box-sizing: border-box;
-
-  /* Image de fond Springfield */
   background: url("/public/img/simpsons_springfield.jpg") no-repeat center
     center;
   background-size: cover;
-  padding: 40px 20px;
+  padding: 30px 20px 20px 20px; /* 20px en bas pour laisser respirer juste au-dessus du footer */
 }
 
 /* --- Style personnalisé pour le bouton Retour --- */
@@ -39,6 +37,15 @@
   align-items: center;
   gap: 8px;
 }
+/* Nouveau conteneur des flèches tout en bas */
+.bottom-nav-arrows {
+  display: flex;
+  justify-content: space-between; /* Place la flèche gauche à gauche et la droite à droite */
+  align-items: center;
+  width: 100%;
+  max-width: 1700px; /* Aligné sur la largeur maximale de la carte */
+  margin-top: 25px;
+}
 
 .back-button:hover {
   background-color: #ffae00; /* Jaune plus lumineux au survol */
@@ -61,7 +68,7 @@
   gap: 20px;
 }
 
-/* Style des flèches de navigation */
+/* Style des flèches de navigation (sans position: absolute) */
 .nav-arrow {
   display: flex;
   align-items: center;
@@ -188,6 +195,9 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
+span {
+  font-family: "Excalifont";
+}
 
 /* Adaptations mobiles / tablettes */
 @media screen and (max-width: 900px) {
@@ -227,5 +237,10 @@
 
   .pills-container {
     justify-content: center;
+    font-family: "Excalifont";
   }
+}
+
+span h1 {
+  font-family: "Excalifont";
 }
