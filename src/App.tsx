@@ -21,8 +21,7 @@ function App() {
         <Route path="/" element={<Characters />} />
         <Route path="/character/:id" element={<CharacterDetail />} />
       </Routes>
-      <Simpsons />
-      <Author />
+
       <Footer />
     </>
   );

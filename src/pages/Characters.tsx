@@ -1,6 +1,7 @@
 import "./Characters.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Author from "../components/Author/Author";
 
 interface CharacterData {
   id: number;
@@ -55,7 +56,9 @@ export default function Characters() {
 
   return (
     <div className="characters-carousel-container">
-      <div id="personnages" className="carousel-wrapper">
+      <h2>Galerie des Personnages de Springfield</h2>
+
+      <div className="carousel-wrapper">
         {/* Bouton Précédent */}
         <button className="carousel-arrow" onClick={prevCharacter}>
           ◀
@@ -67,15 +70,12 @@ export default function Characters() {
             to={`/character/${leftCharacter.id}`}
             className="character-card side-card"
           >
-            <img
-              src={`/public/img/${leftCharacter.img}`}
-              alt={leftCharacter.name}
-            />
+            <img src={`/img/${leftCharacter.img}`} alt={leftCharacter.name} />
             <h3>{leftCharacter.name}</h3>
             <p className="card-sub">{leftCharacter.role}</p>
           </Link>
 
-          {/* 2. Carte centrale (Active / Détaillée avec le grand fond jaune) */}
+          {/* 2. Carte centrale (Active / Détaillée avec le grand fond jaune, sans les citations) */}
           <Link
             to={`/character/${centerCharacter.id}`}
             className="character-card active-card"
@@ -89,7 +89,11 @@ export default function Characters() {
               <strong>Rôle :</strong> {centerCharacter.role}
             </p>
             <p className="description">{centerCharacter.description}</p>
-            <span className="details-hint">🔍 Cliquez</span>
+
+            {/* Le bouton d'invitation à voir la fiche complète (où se trouvent les anecdotes) */}
+            <span className="details-hint">
+              🔍 Cliquez pour voir sa fiche complète
+            </span>
           </Link>
 
           {/* 3. Carte de droite (Simple / Latérale) */}
@@ -108,11 +112,13 @@ export default function Characters() {
           ▶
         </button>
       </div>
+
       <div className="carousel-indicators">
         <span>
           {currentIndex + 1} / {characters.length}
         </span>
       </div>
+      <Author />
     </div>
   );
 }

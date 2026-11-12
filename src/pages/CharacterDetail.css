@@ -1,0 +1,246 @@
+/* Conteneur principal qui prend tout l'espace entre le header et le footer */
+.character-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Répartit : bouton retour en haut, carte au milieu, flèches tout en bas */
+  align-items: center;
+  width: 100%;
+  min-height: calc(100vh - 160px);
+  box-sizing: border-box;
+  background: url("/public/img/simpsons_springfield.jpg") no-repeat center
+    center;
+  background-size: cover;
+  padding: 30px 20px 20px 20px; /* 20px en bas pour laisser respirer juste au-dessus du footer */
+}
+
+/* --- Style personnalisé pour le bouton Retour --- */
+.back-button {
+  align-self: flex-start;
+  margin-left: calc(
+    (100% - 1700px) / 2
+  ); /* S'aligne harmonieusement avec la grande carte */
+  margin-bottom: 20px;
+  text-decoration: none;
+  background-color: #ffd900; /* Jaune Simpson */
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 3px solid #000; /* Bordure noire style cartoon */
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+/* Nouveau conteneur des flèches tout en bas */
+.bottom-nav-arrows {
+  display: flex;
+  justify-content: space-between; /* Place la flèche gauche à gauche et la droite à droite */
+  align-items: center;
+  width: 100%;
+  max-width: 1700px; /* Aligné sur la largeur maximale de la carte */
+  margin-top: 25px;
+}
+
+.back-button:hover {
+  background-color: #ffae00; /* Jaune plus lumineux au survol */
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.back-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Enveloppe contenant les flèches et la carte */
+.navigation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1850px;
+  gap: 20px;
+}
+
+/* Style des flèches de navigation (sans position: absolute) */
+.nav-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: #ffd900;
+  color: #000;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border: 3px solid #000;
+  border-radius: 50%;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.nav-arrow:hover {
+  background-color: #ffae00;
+  transform: scale(1.15);
+}
+
+.nav-arrow:active {
+  transform: scale(0.95);
+}
+
+/* Carte principale centrée */
+.character-profile-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1700px;
+  width: 100%;
+  gap: 40px;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+.image-container {
+  flex: 0 0 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 3px solid #000;
+  border-radius: 30px;
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25),
+    inset 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: cover;
+}
+
+.profile-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0px 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+.profile-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.character-profile-card h1 {
+  margin: 0 0 15px 0;
+  font-size: 2.4rem;
+  color: #000;
+  font-weight: bold;
+}
+
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.pill {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.quote-pill {
+  color: #c0392b;
+}
+
+.bio {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: #111;
+  margin-bottom: 20px;
+  text-align: justify;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.anekdote-text {
+  font-size: 1.1rem;
+  color: #311c05;
+  margin: 0;
+  background-color: #fff9e6;
+  border: 2px dashed #f39c12;
+  border-left: 6px solid #e67e22;
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+span {
+  font-family: "Excalifont";
+}
+
+/* Adaptations mobiles / tablettes */
+@media screen and (max-width: 900px) {
+  .back-button {
+    margin-left: 0;
+    align-self: center;
+  }
+
+  .navigation-wrapper {
+    position: relative;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-arrow {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .character-profile-card {
+    flex-direction: column;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .image-container {
+    flex: unset;
+    width: 260px;
+    height: 260px;
+  }
+
+  .bio {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .pills-container {
+    justify-content: center;
+    font-family: "Excalifont";
+  }
+}
+
+span h1 {
+  font-family: "Excalifont";
+}

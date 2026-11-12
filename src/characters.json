@@ -185,7 +185,7 @@
     "school": "Springfield Elementary"
   },
   {
-    "id": 21,
+    "id": 20,
     "name": "Ralph Wiggum",
     "img": "ralph_wiggum.jpg",
     "description": "Dim-witted son of Chief Wiggum.",
@@ -195,7 +195,7 @@
     "father": "Chief Wiggum"
   },
   {
-    "id": 22,
+    "id": 21,
     "name": "Patty Bouvier",
     "img": "patty_bouvier.jpg",
     "description": "Cynical and sarcastic twin sister of Selma Bouvier.",
@@ -204,7 +204,7 @@
     "sisters": ["Selma Bouvier"]
   },
   {
-    "id": 23,
+    "id": 22,
     "name": "Selma Bouvier",
     "img": "selma_bouvier.jpg",
     "description": "Cynical and sarcastic twin sister of Patty Bouvier.",
@@ -213,7 +213,7 @@
     "sisters": ["Patty Bouvier"]
   },
   {
-    "id": 24,
+    "id": 23,
     "name": "Kang",
     "img": "kang.jpg",
     "description": "Alien from Rigel 7 who often visits Springfield.",
@@ -221,7 +221,7 @@
     "occupation": "Alien invader"
   },
   {
-    "id": 25,
+    "id": 24,
     "name": "Kodos",
     "img": "kodos.jpg",
     "description": "Alien from Rigel 7 who often accompanies Kang.",
@@ -229,7 +229,7 @@
     "occupation": "Alien invader"
   },
   {
-    "id": 26,
+    "id": 25,
     "name": "Comic Book Guy",
     "img": "comic_book_guy.jpg",
     "description": "Overweight and sarcastic proprietor of the Android's Dungeon comic book store.",
@@ -238,17 +238,7 @@
     "store": "Android's Dungeon"
   },
   {
-    "id": 27,
-    "name": "Nelson Muntz",
-    "img": "nelson_muntz.jpg",
-    "description": "Bullying classmate of Bart Simpson.",
-    "age": 10,
-    "occupation": "Student",
-    "school": "Springfield Elementary",
-    "gang": "The Bullies"
-  },
-  {
-    "id": 28,
+    "id": 26,
     "name": "Mayor Joe Quimby",
     "img": "mayor_quimby.jpg",
     "description": "Corrupt and womanizing mayor of Springfield.",
@@ -257,7 +247,7 @@
     "city": "Springfield"
   },
   {
-    "id": 29,
+    "id": 27,
     "name": "Dr. Julius Hibbert",
     "img": "dr_hibbert.jpg",
     "description": "Friendly and competent doctor in Springfield.",
@@ -266,17 +256,7 @@
     "clinic": "Springfield General Hospital"
   },
   {
-    "id": 30,
-    "name": "Maggie Simpson",
-    "img": "maggie_simpson.jpg",
-    "description": "Precocious baby of the Simpson family.",
-    "age": 1,
-    "occupation": "Baby",
-    "parents": ["Homer", "Marge"],
-    "siblings": ["Bart", "Lisa"]
-  },
-  {
-    "id": 31,
+    "id": 28,
     "name": "Edna Krabappel",
     "img": "edna_krabappel.jpg",
     "description": "Jaded and cynical fourth-grade teacher at Springfield Elementary School.",
@@ -285,7 +265,7 @@
     "school": "Springfield Elementary"
   },
   {
-    "id": 32,
+    "id": 29,
     "name": "Professor Frink",
     "img": "professor_frink.jpg",
     "description": "Eccentric and brilliant scientist in Springfield.",
@@ -294,7 +274,7 @@
     "field": "Science"
   },
   {
-    "id": 33,
+    "id": 30,
     "name": "Cletus Spuckler",
     "img": "cletus_spuckler.jpg",
     "description": "Stereotypical hillbilly and father of numerous children.",
@@ -316,7 +296,7 @@
     ]
   },
   {
-    "id": 34,
+    "id": 31,
     "name": "Brandine Spuckler",
     "img": "brandine_spuckler.jpg",
     "description": "Wife of Cletus Spuckler and mother of numerous children.",
@@ -337,16 +317,7 @@
     ]
   },
   {
-    "id": 35,
-    "name": "Moe Szyslak",
-    "img": "moe_szyslak.jpg",
-    "description": "Cynical and surly owner of Moe's Tavern.",
-    "age": 48,
-    "occupation": "Bar owner",
-    "bar": "Moe's Tavern"
-  },
-  {
-    "id": 36,
+    "id": 32,
     "name": "Lenny Leonard",
     "img": "lenny_leonard.jpg",
     "description": "Loyal friend of Homer Simpson and frequent patron of Moe's Tavern.",
@@ -355,7 +326,7 @@
     "hangout": "Moe's Tavern"
   },
   {
-    "id": 37,
+    "id": 33,
     "name": "Carl Carlson",
     "img": "carl_carlson.jpg",
     "description": "Loyal friend of Homer Simpson and frequent patron of Moe's Tavern.",
@@ -364,16 +335,7 @@
     "hangout": "Moe's Tavern"
   },
   {
-    "id": 38,
-    "name": "Patty Bouvier",
-    "img": "patty_bouvier.jpg",
-    "description": "Cynical and sarcastic twin sister of Selma Bouvier.",
-    "age": 40,
-    "occupation": "DMV employee",
-    "sisters": ["Selma Bouvier"]
-  },
-  {
-    "id": 39,
+    "id": 34,
     "name": "Lionel Hutz",
     "img": "lionel_hutz.jpg",
     "description": "Incompetent and sleazy attorney in Springfield.",
@@ -381,7 +343,7 @@
     "occupation": "Lawyer"
   },
   {
-    "id": 40,
+    "id": 35,
     "name": "Troy McClure",
     "img": "troy_mcclure.jpg",
     "description": "Faded and washed-up Hollywood actor often seen in educational films and commercials.",
@@ -389,7 +351,7 @@
     "occupation": "Actor"
   },
   {
-    "id": 41,
+    "id": 36,
     "name": "Bleeding Gums Murphy",
     "img": "bleeding_gums_murphy.jpg",
     "description": "Jazz musician and mentor to Lisa Simpson.",
@@ -397,7 +359,7 @@
     "occupation": "Musician"
   },
   {
-    "id": 42,
+    "id": 37,
     "name": "Snake Jailbird",
     "img": "snake_jailbird.jpg",
     "description": "Frequent criminal and fugitive in Springfield.",
@@ -406,7 +368,7 @@
     "crimes": ["Robbery", "Assault", "Kidnapping"]
   },
   {
-    "id": 43,
+    "id": 38,
     "name": "Disco Stu",
     "img": "disco_stu.jpg",
     "description": "Disco-loving resident of Springfield with a passion for everything disco.",
@@ -415,7 +377,7 @@
     "passion": "Disco"
   },
   {
-    "id": 44,
+    "id": 39,
     "name": "Hans Moleman",
     "img": "hans_moleman.jpg",
     "description": "Elderly and unfortunate resident of Springfield.",
@@ -424,7 +386,7 @@
     "catchphrase": "I'm Hans Moleman, and I hit the pavement."
   },
   {
-    "id": 45,
+    "id": 40,
     "name": "Dr. Nick Riviera",
     "img": "dr_nick_riviera.jpg",
     "description": "Inept and unethical quack doctor in Springfield.",
@@ -433,7 +395,7 @@
     "clinic": "Dr. Nick's Medical Clinic"
   },
   {
-    "id": 46,
+    "id": 41,
     "name": "Gil Gunderson",
     "img": "gil_gunderson.jpg",
     "description": "Pathetic and unlucky salesman often seen struggling with financial problems.",
@@ -441,7 +403,7 @@
     "occupation": "Salesman"
   },
   {
-    "id": 47,
+    "id": 42,
     "name": "Kent Brockman",
     "img": "kent_brockman.jpg",
     "description": "Sensationalist and egotistical news anchor in Springfield.",
@@ -450,7 +412,7 @@
     "network": "Channel 6"
   },
   {
-    "id": 48,
+    "id": 43,
     "name": "Lunchlady Doris",
     "img": "lunchlady_doris.jpg",
     "description": "Gruff and tough lunch lady at Springfield Elementary School.",
@@ -459,7 +421,7 @@
     "school": "Springfield Elementary"
   },
   {
-    "id": 49,
+    "id": 44,
     "name": "Squeaky-Voiced Teen",
     "img": "squeaky_voiced_teen.jpg",
     "description": "Awkward and high-pitched teenager often seen working odd jobs around Springfield.",
@@ -467,7 +429,7 @@
     "occupation": "Various odd jobs"
   },
   {
-    "id": 50,
+    "id": 45,
     "name": "Mrs. Krabappel",
     "img": "mrs_krabappel.jpg",
     "description": "Jaded and cynical fourth-grade teacher at Springfield Elementary School.",
