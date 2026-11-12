@@ -1,6 +1,7 @@
 import "./Characters.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Author from "../components/Author/Author";
 
 interface CharacterData {
   id: number;
@@ -117,6 +118,7 @@ export default function Characters() {
           {currentIndex + 1} / {characters.length}
         </span>
       </div>
+      <Author />
     </div>
   );
 }
