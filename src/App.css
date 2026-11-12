@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  background-image:
+  /* L'opacité de l'arrière plan */
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("/simpsons_springfield.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

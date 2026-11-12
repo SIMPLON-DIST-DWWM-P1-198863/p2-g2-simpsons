@@ -88,12 +88,12 @@
     "employer": "Montgomery Burns"
   },
   {
-    "id": 10,
-    "name": "Principal Seymour Skinner",
-    "img": "principal_skinner.jpg",
-    "description": "Authoritarian and uptight principal of Springfield Elementary School.",
-    "age": 48,
-    "occupation": "Principal",
+    "id": 19,
+    "name": "Seymour Skinner",
+    "img": "seymour_skinner.jpg",
+    "description": "Stern and disciplined superintendent of Springfield Elementary School.",
+    "age": 55,
+    "occupation": "Superintendent",
     "school": "Springfield Elementary",
     "mother": "Agnes Skinner"
   },
@@ -174,16 +174,6 @@
     "occupation": "Student",
     "school": "Springfield Elementary",
     "parents": ["Kirk", "Luann"]
-  },
-  {
-    "id": 19,
-    "name": "Seymour Skinner",
-    "img": "seymour_skinner.jpg",
-    "description": "Stern and disciplined superintendent of Springfield Elementary School.",
-    "age": 55,
-    "occupation": "Superintendent",
-    "school": "Springfield Elementary",
-    "mother": "Agnes Skinner"
   },
   {
     "id": 20,
@@ -313,7 +303,16 @@
     "farm": "Spuckler Farm",
     "wife": "Brandine Spuckler",
     "children": [
-      "Cletus Jr.", "Tiffany", "Heather", "Dakota", "Samantha", "Hunter", "Rubella", "Dylan", "Dermot", "Jordan"
+      "Cletus Jr.",
+      "Tiffany",
+      "Heather",
+      "Dakota",
+      "Samantha",
+      "Hunter",
+      "Rubella",
+      "Dylan",
+      "Dermot",
+      "Jordan"
     ]
   },
   {
@@ -325,7 +324,16 @@
     "occupation": "Homemaker",
     "husband": "Cletus Spuckler",
     "children": [
-      "Cletus Jr.", "Tiffany", "Heather", "Dakota", "Samantha", "Hunter", "Rubella", "Dylan", "Dermot", "Jordan"
+      "Cletus Jr.",
+      "Tiffany",
+      "Heather",
+      "Dakota",
+      "Samantha",
+      "Hunter",
+      "Rubella",
+      "Dylan",
+      "Dermot",
+      "Jordan"
     ]
   },
   {

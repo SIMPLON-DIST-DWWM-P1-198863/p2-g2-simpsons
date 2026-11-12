@@ -55,8 +55,6 @@ export default function Characters() {
 
   return (
     <div className="characters-carousel-container">
-      <h2>Galerie des Personnages de Springfield</h2>
-
       <div id="personnages" className="carousel-wrapper">
         {/* Bouton Précédent */}
         <button className="carousel-arrow" onClick={prevCharacter}>
@@ -91,9 +89,7 @@ export default function Characters() {
               <strong>Rôle :</strong> {centerCharacter.role}
             </p>
             <p className="description">{centerCharacter.description}</p>
-            <span className="details-hint">
-              🔍 Cliquez pour voir sa fiche complète
-            </span>
+            <span className="details-hint">🔍 Cliquez</span>
           </Link>
 
           {/* 3. Carte de droite (Simple / Latérale) */}

@@ -8,9 +8,9 @@
 
   width: calc(100% - 40px);
   max-width: 1100px;
-  min-height: 160px;
+  min-height: 100px;
   margin: 20px auto;
-  padding: 15px 25px;
+  padding: 5px 25px;
   gap: 15px;
 
   border: 5px solid transparent;
@@ -27,6 +27,22 @@
     300% 300%;
   animation: rainbow-border 6s linear infinite;
   overflow: hidden;
+}
+
+.text-banner {
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+.text-banner-title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin: 0;
+  font-size: x-large;
+  color: white;
+  font-family: "Excalifont", sans-serif;
 }
 
 @keyframes rainbow-border {
@@ -63,6 +79,8 @@
   min-width: 0;
   text-align: center;
   color: white;
+  font-family: esc;
+  margin-top: 2em;
 }
 
 .banner-content h1 {
@@ -76,7 +94,7 @@
 }
 
 .banner-content span {
-  font-size: 0.9rem;
+  font-size: 16px;
   font-weight: bold;
 }
 
