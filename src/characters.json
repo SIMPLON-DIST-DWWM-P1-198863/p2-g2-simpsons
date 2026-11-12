@@ -88,12 +88,12 @@
     "employer": "Montgomery Burns"
   },
   {
-    "id": 10,
-    "name": "Principal Seymour Skinner",
-    "img": "principal_skinner.jpg",
-    "description": "Authoritarian and uptight principal of Springfield Elementary School.",
-    "age": 48,
-    "occupation": "Principal",
+    "id": 19,
+    "name": "Seymour Skinner",
+    "img": "seymour_skinner.jpg",
+    "description": "Stern and disciplined superintendent of Springfield Elementary School.",
+    "age": 55,
+    "occupation": "Superintendent",
     "school": "Springfield Elementary",
     "mother": "Agnes Skinner"
   },
@@ -176,7 +176,7 @@
     "parents": ["Kirk", "Luann"]
   },
   {
-    "id": 19,
+    "id": 20,
     "name": "Groundskeeper Willie",
     "img": "groundskeeper_willie.jpg",
     "description": "Scottish school janitor with a gruff exterior.",

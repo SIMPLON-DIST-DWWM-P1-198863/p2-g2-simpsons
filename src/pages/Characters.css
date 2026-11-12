@@ -10,16 +10,10 @@
   padding: 30px 15px;
   box-sizing: border-box;
 
-  /* Arrière-plan avec l'image depuis public/img */
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)),
-    url("/public/img/simpsons_springfield.jpg");
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .characters-carousel-container h2 {
   text-align: center;
@@ -61,26 +55,26 @@
    CARTES LATÉRALES (Gaucher / Droite - Simples)
    ========================================== */
 .side-card {
-  background-color: #ffffff;
-  border: 2px solid #000;
+  background-color: #f1e100;
+  border: 0.01em solid #c5c200;
   border-radius: 16px;
   padding: 15px;
   width: 220px;
   transform: scale(0.85);
-  opacity: 0.7;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0.98;
 }
 
 .side-card:hover {
-  opacity: 0.95;
   transform: scale(0.88);
 }
 
 .side-card img {
-  width: 120px;
-  height: 140px;
-  object-fit: contain;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 220px; /* même hauteur pour toutes */
+  object-fit: cover; /* recadre au lieu d'étirer */
+  object-position: top; /* garde le visage en haut */
+  display: block;
+  border-radius: 8px;
 }
 
 .side-card h3 {
@@ -98,31 +92,41 @@
 /* ==========================================
    CARTE CENTRALE (Active - Grand format jaune)
    ========================================== */
-.active-card {
-  background-color: #ffde00;
-  /* Jaune Simpsons */
-  border: 3px solid #000;
-  border-radius: 24px;
-  padding: 25px 20px;
-  width: 420px;
-  transform: scale(1);
-  z-index: 2;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+.character-card h3 {
+  font-family: "Excalifont", sans-serif;
+  font-size: large;
 }
 
-.active-card:hover {
-  transform: scale(1.02);
+.character-card.active-card h3 {
+  font-size: xx-large;
+}
+
+.active-card {
+  background-color: #ffde00;
+  border: 1px solid #000;
+  border-radius: 24px;
+  width: 420px;
+  height: 500px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start; /* évite le recentrage vertical dans le carousel */
+  transition: none;
+  z-index: 2;
+  box-shadow: 0 12px 24px rgba(221, 217, 2, 0.25);
 }
 
 .active-card img {
   width: 100%;
-  height: 200px;
+  height: 60%;
   object-fit: contain;
-  border-radius: 8px;
-  border: 2px solid #333;
-  margin-bottom: 15px;
+  border-radius: 24px 24px 0 0;
+  border: 1px solid #333;
+  margin-bottom: 5%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: none;
+  animation: none;
 }
 
 .active-card h3 {
@@ -144,6 +148,7 @@
   margin-bottom: 15px;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -169,9 +174,7 @@
 
 /* Boutons de navigation (Flèches) */
 .carousel-arrow {
-  background-color: #0077c8;
-  color: white;
-  border: 2px solid #000;
+  color: rgb(0, 0, 0);
   font-size: 18px;
   width: 45px;
   height: 45px;
@@ -184,12 +187,10 @@
     background-color 0.2s,
     transform 0.1s;
   flex-shrink: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
 
 .carousel-arrow:hover {
-  background-color: #005999;
   transform: scale(1.1);
 }
 
@@ -197,11 +198,13 @@
   margin-top: 25px;
   font-weight: bold;
   font-size: 1.1rem;
-  background-color: #fff;
   padding: 6px 16px;
   border-radius: 12px;
-  border: 2px solid #ccc;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  margin: 0;
+  padding: 0;
 }
 
 /* Responsive : sur mobiles, on masque les cartes latérales et on centre la carte active */
