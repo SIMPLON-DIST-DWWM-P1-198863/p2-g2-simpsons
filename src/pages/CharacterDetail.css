@@ -182,7 +182,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.anekdote-text {
+.anecdote-text {
   font-size: 1.1rem;
   color: #311c05;
   margin: 0;
@@ -194,6 +194,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
+  text-align: center;
 }
 span {
   font-family: "Excalifont";
