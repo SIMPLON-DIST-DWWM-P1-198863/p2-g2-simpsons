@@ -10,9 +10,12 @@ function SearchBar() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    getCharacters()
-      .then(setCharacters)
-      .catch(() => setError(true));
+    try {
+      const data = getCharacters();
+      setCharacters(data);
+    } catch {
+      setError(true);
+    }
   }, []);
 
   const results = characters
@@ -51,8 +54,7 @@ function SearchBar() {
             className="search-clear"
             type="button"
             onClick={clearSearch}
-            aria-label="Effacer la recherche"
-          >
+            aria-label="Effacer la recherche">
             ✕
           </button>
         )}

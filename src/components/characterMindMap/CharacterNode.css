@@ -1,0 +1,142 @@
+/* =========================================
+   CARTE DU PERSONNAGE
+========================================= */
+
+.character-node {
+  width: 160px;
+  padding: 12px;
+  box-sizing: border-box;
+  background: #ffd90f;
+  border: 3px solid #222;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 3px 4px 0 #222;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Effet au survol */
+
+.character-node:hover {
+  transform: translateY(-4px);
+  box-shadow: 3px 8px 0 #222;
+}
+
+/* =========================================
+   IMAGE DU PERSONNAGE
+========================================= */
+
+.character-node__image {
+  width: 85px;
+  height: 85px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #222;
+}
+
+/* =========================================
+   INFORMATIONS DU PERSONNAGE
+========================================= */
+
+.character-node__info h3 {
+  margin: 8px 0 4px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #222;
+}
+
+.character-node__info p {
+  margin: 0;
+  font-size: 12px;
+  color: #444;
+}
+
+/* =========================================
+   POINTS DE CONNEXION
+========================================= */
+
+.character-node .react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background: #222;
+  border: 2px solid white;
+}
+
+/* =========================================
+   PERSONNAGE SÉLECTIONNÉ
+========================================= */
+
+.character-node--selected {
+  outline: 5px solid #ff81c1;
+  outline-offset: 5px;
+  box-shadow: 0 0 18px rgba(255, 129, 193, 0.7);
+  transform: scale(1.08);
+  z-index: 10;
+}
+
+/* Conserve l'effet de sélection au survol */
+
+.character-node--selected:hover {
+  transform: scale(1.08) translateY(-4px);
+  box-shadow:
+    0 0 18px rgba(255, 129, 193, 0.7),
+    3px 8px 0 #222;
+}
+
+/* =========================================
+   TABLETTES ET MOBILES
+========================================= */
+
+@media (max-width: 768px) {
+  .character-node {
+    transform: scale(0.85);
+    transform-origin: center;
+  }
+
+  .character-node:hover {
+    transform: scale(0.85) translateY(-4px);
+  }
+
+  .character-node--selected {
+    transform: scale(0.95);
+  }
+
+  .character-node--selected:hover {
+    transform: scale(0.95) translateY(-4px);
+  }
+}
+
+/* =========================================
+   PETITS TÉLÉPHONES
+========================================= */
+
+@media (max-width: 480px) {
+  .character-node {
+    transform: scale(0.75);
+  }
+
+  .character-node:hover {
+    transform: scale(0.75) translateY(-4px);
+  }
+
+  .character-node--selected {
+    transform: scale(0.85);
+  }
+
+  .character-node--selected:hover {
+    transform: scale(0.85) translateY(-4px);
+  }
+}
+
+/* =========================================
+   ACCESSIBILITÉ : RÉDUCTION DES ANIMATIONS
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .character-node {
+    transition: none;
+  }
+}

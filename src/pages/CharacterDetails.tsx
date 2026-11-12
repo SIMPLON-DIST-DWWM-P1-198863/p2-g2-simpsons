@@ -15,14 +15,17 @@ function CharacterDetails() {
     setError(false);
     setCharacter(null);
 
-    getCharacters()
-      .then((characters) => {
-        const found = characters.find((item:Character) => item.id === Number(id));
+    try {
+      const characters = getCharacters();
 
-        setCharacter(found ?? null);
-      })
-      .catch(() => setError(true))
-      .finally(() => setLoading(false));
+      const found = characters.find((item) => item.id === Number(id));
+
+      setCharacter(found ?? null);
+    } catch {
+      setError(true);
+    } finally {
+      setLoading(false);
+    }
   }, [id]);
 
   if (loading) return <p>Chargement du personnage...</p>;
@@ -40,7 +43,7 @@ function CharacterDetails() {
       <h1>{character.name}</h1>
 
       <img
-        src={`https://materiel-apprentissage.github.io/api/${character.img}`}
+        src={`/img/${character.img}`}
         alt={character.name}
         onError={(e) => {
           e.currentTarget.style.display = "none";

@@ -1,11 +1,6 @@
-const API_URL = "https://materiel-apprentissage.github.io/api/simpsons.json";
+import charactersData from "../data/Character.json";
+import type { Character } from "../types/Character";
 
-export async function getCharacters() {
-  const response = await fetch(API_URL);
-
-  if (!response.ok) {
-    throw new Error("Impossible de récupérer les personnages.");
-  }
-
-  return response.json();
+export function getCharacters(): Character[] {
+  return charactersData as Character[];
 }

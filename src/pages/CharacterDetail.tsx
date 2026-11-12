@@ -1,56 +1,107 @@
 import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
+import { getCharacters } from "../services/characters";
+import CharacterMindMap from "../components/characterMindMap/CharacterMindMap";
+import "./CharacterDetail.css";
 
 export default function CharacterDetail() {
-  // Récupère l'ID présent dans l'URL (ex: /character/1 -> id = 1)
   const { id } = useParams();
-  const [character, setCharacter] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(true);
 
-  useEffect(() => {
-    // Ici, vous pouvez faire un fetch spécifique pour un personnage,
-    // ou filtrer votre liste globale selon l'ID
-    fetch(`https://materiel-apprentissage.github.io/api/simpsons.json`)
-      .then((res) => res.json())
-      .then((data) => {
-        setCharacter(data[Number(id) - 1]);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error(err);
-        setLoading(false);
-      });
-  }, [id]);
+  const [showMindMap, setShowMindMap] = useState(false);
 
-  if (loading) return <div>Chargement du profil...</div>;
-  if (!character) return <div>Personnage introuvable !</div>;
+  const characters = getCharacters();
+
+  const characterIndex = characters.findIndex((item) => item.id === Number(id));
+
+  const character = characters[characterIndex];
+
+  if (!character) {
+    return <p>Personnage introuvable !</p>;
+  }
+
+  const previousCharacter = characters[characterIndex - 1];
+  const nextCharacter = characters[characterIndex + 1];
 
   return (
-    <div className="character-detail-page">
-      {/* Bouton pour revenir en arrière */}
+    <div className="character-detail-container">
       <Link to="/" className="back-button">
         ⬅ Retour à l'accueil
       </Link>
 
-      <div className="character-profile">
-        <img src={character.image} alt={character.name} />
-        <h1>{character.name}</h1>
-        <p className="role">
-          <strong>Rôle :</strong> {character.role}
-        </p>
-        <p className="bio">
-          <strong>Biographie :</strong> {character.description}
-        </p>
+      {/* Fiche du personnage */}
+      <div className="navigation-wrapper">
+        {previousCharacter ? (
+          <Link
+            to={`/character/${previousCharacter.id}`}
+            className="nav-arrow"
+            aria-label="Personnage précédent">
+            ‹
+          </Link>
+        ) : (
+          <span />
+        )}
 
-        {/* Vous pouvez rajouter ici des infos exclusives pour sa page dédiée */}
-        <div className="extra-info">
-          <h3>Le saviez-vous ?</h3>
-          <p>
-            Ici, vous pouvez afficher des anecdotes supplémentaires, ses
-            meilleures citations ou ses apparitions célèbres !
-          </p>
+        <div className="character-profile-card">
+          <div className="image-container">
+            <img
+              src={`/img/${character.img}`}
+              alt={character.name}
+              className="profile-img"
+            />
+          </div>
+
+          <div className="profile-content">
+            <h1>{character.name}</h1>
+
+            <div className="pills-container">
+              <span className="pill">
+                {typeof character.age === "number"
+                  ? `${character.age} ans`
+                  : "Âge inconnu"}
+              </span>
+
+              <span className="pill">
+                {character.occupation ?? "Profession inconnue"}
+              </span>
+            </div>
+
+            <p className="bio">
+              <strong>Biographie :</strong> {character.description}
+            </p>
+          </div>
         </div>
+
+        {nextCharacter ? (
+          <Link
+            to={`/character/${nextCharacter.id}`}
+            className="nav-arrow"
+            aria-label="Personnage suivant">
+            ›
+          </Link>
+        ) : (
+          <span />
+        )}
       </div>
+
+      {/* Carte mentale dépliable */}
+      <section className="character-relations">
+        <h2>Les relations de {character.name}</h2>
+
+        <button
+          type="button"
+          className="mindmap-toggle"
+          onClick={() => setShowMindMap((previous) => !previous)}
+          aria-expanded={showMindMap}>
+          {showMindMap ? "Masquer les relations ▲" : "Voir les relations ▼"}
+        </button>
+
+        {showMindMap && (
+          <div className="mindmap-container">
+            <CharacterMindMap selectedCharacterId={character.id} />{" "}
+          </div>
+        )}
+      </section>
     </div>
   );
 }
