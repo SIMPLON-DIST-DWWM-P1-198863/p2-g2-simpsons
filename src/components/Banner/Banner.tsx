@@ -12,19 +12,19 @@ export default function Banner() {
         className="banner-close"
         onClick={() => setVisible(false)}
         aria-label="Fermer la bannière"
-        title="Fermer">
+        title="Fermer"
+      >
         &times;
       </button>
-
+      <h1 className="text-banner-title">D'oh ! Bienvenue à Springfield !</h1>
       <img src="/homerdonut.png" className="banner-image banner-image-left" />
 
       <div className="banner-content">
-        <h1>D'oh ! Bienvenue à Springfield !</h1>
-        <p>
+        <p className="text-banner">
           Tout l'univers des Simpson à portée de clic. Découvrez les
           personnages, leurs histoires et les secrets de la série !
         </p>
-        <span>Laurie · Jonathan · Serigne</span>
+        <span className="text-banner">Laurie · Jonathan · Serigne</span>
       </div>
 
       <img src="/homerdonut.png" className="banner-image banner-image-right" />
