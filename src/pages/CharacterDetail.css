@@ -1,3 +1,59 @@
+/* --- Section des relations --- */
+
+.character-relations {
+  width: 100%;
+  max-width: 1700px;
+  margin-top: 40px;
+  padding: 30px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(4px);
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.character-relations h2 {
+  margin-bottom: 20px;
+  color: #222;
+  font-size: 1.8rem;
+}
+
+.mindmap-toggle {
+  padding: 12px 25px;
+  background: #ff81c1;
+  color: #222;
+  border: 3px solid #222;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.mindmap-toggle:hover {
+  transform: translateY(-3px);
+}
+
+.mindmap-container {
+  width: 100%;
+  height: 700px;
+  margin-top: 25px;
+  overflow: hidden;
+  border: 3px solid #ff81c1;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 900px) {
+  .character-relations {
+    padding: 20px;
+  }
+
+  .mindmap-container {
+    height: 550px;
+  }
+}
 /* Conteneur principal qui prend tout l'espace entre le header et le footer */
 .character-detail-container {
   display: flex;
