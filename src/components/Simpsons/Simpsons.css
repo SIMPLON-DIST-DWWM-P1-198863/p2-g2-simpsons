@@ -6,11 +6,12 @@
   align-items: center;
   gap: 2rem;
   width: 100vw;
+  margin: 2rem 15% 2rem 15%;
 }
 .description-simpson {
   padding: 2rem 0 2rem;
   margin-left: 15%;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.6;
   font-family: Tahoma, Verdana, Geneva, sans-serif;
 }
@@ -32,6 +33,22 @@
 }
 .regroupement {
   margin-right: 15%;
+}
+span .saisonsepisodes {
+  flex-direction: column;
+  gap: 0.1rem;
+  order: 0;
+}
+.saisonsepisodes p {
+  background-color: #dedb21;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #333;
+  box-shadow: 2px 2px 0px #000;
+  margin: 0;
 }
 
 @media (max-width: 1000px) {

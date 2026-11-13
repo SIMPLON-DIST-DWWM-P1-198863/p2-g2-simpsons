@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Author from "../components/Author/Author";
 import Simpsons from "../components/Simpsons/Simpsons";
-import "../components/Simpsons/Simpsons.css";
 
 interface CharacterData {
   id: number;

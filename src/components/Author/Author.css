@@ -4,6 +4,7 @@
   border-radius: 2rem;
   opacity: 90%;
   margin: 2rem 15% 2rem 15%;
+  width: 120%;
 }
 .carte-conteneur {
   position: relative;
@@ -38,6 +39,7 @@
   -webkit-line-clamp: 7;
   line-clamp: 7;
   overflow: hidden;
+  font-size: 1rem;
 }
 .descriptionMatt.ouverte {
   display: block;
