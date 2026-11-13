@@ -1,57 +1,47 @@
 import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
+import { getCharacters } from "../services/characters";
+import CharacterMindMap from "../components/characterMindMap/CharacterMindMap";
 import "./CharacterDetail.css";
-import charactersData from "../types/characterDetail.json";
 
 export default function CharacterDetail() {
   const { id } = useParams();
-  const characterId = Number(id);
-  const [character, setCharacter] = useState<any>(null);
-  const [loading, setLoading] = useState<boolean>(true);
 
-  // charactersData est maintenant un tableau, on récupère tous les IDs valides
-  const validIds = charactersData.map((c: any) => c.id);
-  const currentIndex = validIds.indexOf(characterId);
+  const [showMindMap, setShowMindMap] = useState(false);
 
-  const prevId =
-    currentIndex > 0
-      ? validIds[currentIndex - 1]
-      : validIds[validIds.length - 1];
-  const nextId =
-    currentIndex < validIds.length - 1 && currentIndex !== -1
-      ? validIds[currentIndex + 1]
-      : validIds[0];
+  const characters = getCharacters();
 
-  useEffect(() => {
-    // On cherche directement le personnage dans le tableau importé
-    const found = charactersData.find((c: any) => c.id === characterId);
+  const characterIndex = characters.findIndex((item) => item.id === Number(id));
 
-    if (found) {
-      setCharacter(found);
-      setLoading(false);
-    } else {
-      // Sécurité si l'ID n'est pas trouvé, on prend le premier (Homer)
-      setCharacter(charactersData[0]);
-      setLoading(false);
-    }
-  }, [characterId]);
+  const character = characters[characterIndex];
 
-  if (loading)
-    return <div className="character-detail-container">Chargement...</div>;
-  if (!character)
-    return (
-      <div className="character-detail-container">Personnage introuvable !</div>
-    );
+  if (!character) {
+    return <p>Personnage introuvable !</p>;
+  }
+
+  const previousCharacter = characters[characterIndex - 1];
+  const nextCharacter = characters[characterIndex + 1];
 
   return (
     <div className="character-detail-container">
-      {/* Bouton retour vers la page d'accueil / liste des personnages */}
       <Link to="/" className="back-button">
         ⬅ Retour à la liste!
       </Link>
 
+      {/* Fiche du personnage */}
       <div className="navigation-wrapper">
-        {/* Carte principale du personnage uniquement */}
+        {previousCharacter ? (
+          <Link
+            to={`/character/${previousCharacter.id}`}
+            className="nav-arrow"
+            aria-label="Personnage précédent">
+            ‹
+          </Link>
+        ) : (
+          <span />
+        )}
+
         <div className="character-profile-card">
           <div className="image-container">
             <img
@@ -65,46 +55,53 @@ export default function CharacterDetail() {
             <h1>{character.name}</h1>
 
             <div className="pills-container">
-              {character.age && (
-                <span className="pill">{character.age} ans</span>
-              )}
               <span className="pill">
-                {character.occupation || character.role}
+                {typeof character.age === "number"
+                  ? `${character.age} ans`
+                  : "Âge inconnu"}
               </span>
-              {character.quote && (
-                <span className="pill quote-pill">"{character.quote}"</span>
-              )}
+
+              <span className="pill">
+                {character.occupation ?? "Profession inconnue"}
+              </span>
             </div>
 
-            <p className="bio">{character.description}</p>
-
-            {character.anekdote && (
-              <p className="anecdote-text">
-                <em>Anecdote : {character.anekdote}</em>
-              </p>
-            )}
+            <p className="bio">
+              <strong>Biographie :</strong> {character.description}
+            </p>
           </div>
         </div>
+
+        {nextCharacter ? (
+          <Link
+            to={`/character/${nextCharacter.id}`}
+            className="nav-arrow"
+            aria-label="Personnage suivant">
+            ›
+          </Link>
+        ) : (
+          <span />
+        )}
       </div>
 
-      {/* Flèches de navigation  */}
-      <div className="bottom-nav-arrows">
-        <Link
-          to={`/character/${prevId}`}
-          className="nav-arrow left-arrow"
-          title="Personnage précédent"
-        >
-          ❮
-        </Link>
+      {/* Carte mentale dépliable */}
+      <section className="character-relations">
+        <h2>Les relations de {character.name}</h2>
 
-        <Link
-          to={`/character/${nextId}`}
-          className="nav-arrow right-arrow"
-          title="Personnage suivant"
-        >
-          ❯
-        </Link>
-      </div>
+        <button
+          type="button"
+          className="mindmap-toggle"
+          onClick={() => setShowMindMap((previous) => !previous)}
+          aria-expanded={showMindMap}>
+          {showMindMap ? "Masquer les relations ▲" : "Voir les relations ▼"}
+        </button>
+
+        {showMindMap && (
+          <div className="mindmap-container">
+            <CharacterMindMap selectedCharacterId={character.id} />{" "}
+          </div>
+        )}
+      </section>
     </div>
   );
 }

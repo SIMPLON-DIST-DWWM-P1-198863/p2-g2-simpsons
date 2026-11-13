@@ -1,0 +1,40 @@
+:root {
+  --font-main: "Excalifont", sans-serif;
+}
+
+:root {
+  --font-cartoon: "Excalifont", sans-serif;
+  --font-text: Arial, Helvetica, sans-serif;
+
+  font-family: var(--font-text);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-text);
+}
+
+/* Titres et éléments ludiques */
+h1,
+h2,
+h3,
+h4,
+button,
+nav,
+.logo,
+.badge {
+  font-family: var(--font-cartoon);
+}
+
+/* Textes classiques */
+p,
+li,
+input,
+textarea,
+select {
+  font-family: var(--font-text);
+}
+
+button {
+  cursor: pointer;
+}

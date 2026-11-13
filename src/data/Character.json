@@ -1,0 +1,1126 @@
+[
+  {
+    "id": 1,
+    "name": "Homer Simpson",
+    "img": "homer_simpson.jpg",
+    "description": "Bumbling but lovable father of the Simpson family.",
+    "age": 39,
+    "occupation": "Nuclear safety inspector",
+    "spouse": "Marge Simpson",
+    "children": [
+      "Bart",
+      "Lisa",
+      "Maggie"
+    ],
+    "siblings": [
+      "Herb Powell"
+    ],
+    "relationships": [
+      {
+        "character": "Barney Gumble",
+        "type": "friend",
+        "label": "Ami"
+      },
+      {
+        "character": "Lenny Leonard",
+        "type": "friend",
+        "label": "Meilleur ami"
+      },
+      {
+        "character": "Carl Carlson",
+        "type": "friend",
+        "label": "Meilleur ami"
+      },
+      {
+        "character": "Lenny Leonard",
+        "type": "friend",
+        "label": "Meilleur ami"
+      },
+      {
+        "character": "Moe Szyslak",
+        "type": "friend",
+        "label": "Meilleur ami"
+      },
+      {
+        "character": "Lenny Leonard",
+        "type": "colleague",
+        "label": "Collègue"
+      },
+      {
+        "character": "Carl Carlson",
+        "type": "colleague",
+        "label": "Collègue"
+      },
+      {
+        "character": "Ned Flanders",
+        "type": "neighbor",
+        "label": "Voisin"
+      },
+      {
+        "character": "Maude Flanders",
+        "type": "neighbor",
+        "label": "Voisine"
+      }
+    ],
+    "employer": "Montgomery Burns"
+  },
+  {
+    "id": 2,
+    "name": "Marge Simpson",
+    "img": "marge_simpson.jpg",
+    "description": "Patient and nurturing wife and mother.",
+    "age": 38,
+    "occupation": "Stay-at-home mom",
+    "spouse": "Homer Simpson",
+    "children": [
+      "Bart",
+      "Lisa",
+      "Maggie"
+    ],
+    "siblings": [
+      "Patty Bouvier",
+      "Selma Bouvier"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Bart Simpson",
+    "img": "bart_simpson.jpg",
+    "description": "Mischievous and rebellious son of the Simpson family.",
+    "age": 10,
+    "occupation": "Student",
+    "parents": [
+      "Homer",
+      "Marge"
+    ],
+    "siblings": [
+      "Lisa",
+      "Maggie"
+    ],
+    "nemesis": "Nelson Muntz",
+    "relationships": [
+      {
+        "character": "Milhouse Van Houten",
+        "type": "friend",
+        "label": "Meilleur ami"
+      },
+      {
+        "character": "Nelson Muntz",
+        "type": "enemy",
+        "label": "Ennemi"
+      },
+      {
+        "character": "Ralph Wiggum",
+        "type": "friend",
+        "label": "Ami"
+      },
+      {
+        "character": "Martin Prince",
+        "type": "friend",
+        "label": "Ami"
+      },
+      {
+        "character": "Edna Krabappel",
+        "type": "mentor",
+        "label": "Professeure"
+      },
+      {
+        "character": "Sideshow Bob",
+        "type": "enemy",
+        "label": "Ennemi"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Lisa Simpson",
+    "img": "lisa_simpson.jpg",
+    "description": "Intelligent and talented middle child of the Simpson family.",
+    "age": 8,
+    "occupation": "Student",
+    "parents": [
+      "Homer",
+      "Marge"
+    ],
+    "siblings": [
+      "Bart",
+      "Maggie"
+    ],
+    "relationships": [
+      {
+        "character": "Bleeding Gums Murphy",
+        "type": "mentor",
+        "label": "Mentor"
+      },
+      {
+        "character": "Ralph Wiggum",
+        "type": "friend",
+        "label": "Ami"
+      },
+      {
+        "character": "Milhouse Van Houten",
+        "type": "friend",
+        "label": "Ami"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Maggie Simpson",
+    "img": "maggie_simpson.jpg",
+    "description": "Precocious baby of the Simpson family.",
+    "age": 1,
+    "occupation": "Baby",
+    "parents": [
+      "Homer",
+      "Marge"
+    ],
+    "siblings": [
+      "Bart",
+      "Lisa"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Ned Flanders",
+    "img": "ned_flanders.jpg",
+    "description": "Devoutly religious and overly optimistic neighbor of the Simpsons.",
+    "age": 60,
+    "occupation": "Owner of Leftorium",
+    "spouse": "Maude Flanders (deceased)",
+    "children": [
+      "Rod",
+      "Todd"
+    ],
+    "relationships": [
+      {
+        "character": "Homer Simpson",
+        "type": "neighbor",
+        "label": "Voisin"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Maude Flanders",
+    "img": "maude_flanders.jpg",
+    "description": "Kind-hearted wife of Ned Flanders.",
+    "age": 60,
+    "occupation": "Stay-at-home mom",
+    "spouse": "Ned Flanders",
+    "children": [
+      "Rod",
+      "Todd"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Montgomery Burns",
+    "img": "mr_burns.jpg",
+    "description": "Billionaire owner of the Springfield Nuclear Power Plant, known for his greed and cruelty.",
+    "age": 104,
+    "occupation": "Owner of Springfield Nuclear Power Plant",
+    "assistant": "Waylon Smithers",
+    "employees": [
+      "Homer Simpson",
+      "Lenny Leonard",
+      "Carl Carlson"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Waylon Smithers",
+    "img": "smithers.jpg",
+    "description": "Loyal and devoted assistant to Mr. Burns.",
+    "age": 45,
+    "occupation": "Assistant",
+    "employer": "Montgomery Burns"
+  },
+  {
+    "id": 10,
+    "name": "Principal Seymour Skinner",
+    "img": "principal_skinner.jpg",
+    "description": "Authoritarian and uptight principal of Springfield Elementary School.",
+    "age": 48,
+    "occupation": "Principal",
+    "school": "Springfield Elementary",
+    "mother": "Agnes Skinner"
+  },
+  {
+    "id": 11,
+    "name": "Apu Nahasapeemapetilon",
+    "img": "apu_nahasapeemapetilon.jpg",
+    "description": "Hard-working owner of the Kwik-E-Mart convenience store.",
+    "age": 35,
+    "occupation": "Store owner",
+    "store": "Kwik-E-Mart",
+    "spouse": "Manjula Nahasapeemapetilon",
+    "children": [
+      "Poonam",
+      "Pria",
+      "Anoop",
+      "Sandeep",
+      "Gheet"
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Moe Szyslak",
+    "img": "moe_szyslak.jpg",
+    "description": "Cynical and surly owner of Moe's Tavern.",
+    "age": 48,
+    "occupation": "Bar owner",
+    "bar": "Moe's Tavern"
+  },
+  {
+    "id": 13,
+    "name": "Barney Gumble",
+    "img": "barney_gumble.jpg",
+    "description": "Lovable but perpetually drunk patron of Moe's Tavern.",
+    "age": 42,
+    "occupation": "Unemployed",
+    "hangout": "Moe's Tavern"
+  },
+  {
+    "id": 14,
+    "name": "Chief Clancy Wiggum",
+    "img": "chief_wiggum.jpg",
+    "description": "Inept and lazy chief of police in Springfield.",
+    "age": 45,
+    "occupation": "Police chief",
+    "department": "Springfield Police Department",
+    "wife": "Sarah Wiggum",
+    "children": [
+      "Ralph"
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Krusty the Clown",
+    "img": "krusty_the_clown.jpg",
+    "description": "Cynical and jaded host of Krusty the Clown Show.",
+    "age": 50,
+    "occupation": "TV clown",
+    "show": "Krusty the Clown Show"
+  },
+  {
+    "id": 16,
+    "name": "Sideshow Bob",
+    "img": "sideshow_bob.jpg",
+    "description": "Former sidekick turned arch-nemesis of Krusty the Clown.",
+    "age": 41,
+    "occupation": "Criminal mastermind",
+    "nemesis": "Krusty the Clown"
+  },
+  {
+    "id": 17,
+    "name": "Nelson Muntz",
+    "img": "nelson_muntz.jpg",
+    "description": "Bullying classmate of Bart Simpson.",
+    "age": 10,
+    "occupation": "Student",
+    "school": "Springfield Elementary",
+    "gang": "The Bullies"
+  },
+  {
+    "id": 18,
+    "name": "Milhouse Van Houten",
+    "img": "milhouse_van_houten.jpg",
+    "description": "Geeky best friend of Bart Simpson.",
+    "age": 10,
+    "occupation": "Student",
+    "school": "Springfield Elementary",
+    "parents": [
+      "Kirk",
+      "Luann"
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Groundskeeper Willie",
+    "img": "groundskeeper_willie.jpg",
+    "description": "Scottish school janitor with a gruff exterior.",
+    "age": 47,
+    "occupation": "Janitor",
+    "school": "Springfield Elementary",
+    "employer": "Principal Seymour Skinner",
+    "relationships": [
+      {
+        "character": "Edna Krabappel",
+        "type": "colleague",
+        "label": "Collègue à l'école"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Ralph Wiggum",
+    "img": "ralph_wiggum.jpg",
+    "description": "Dim-witted son of Chief Wiggum.",
+    "age": 8,
+    "occupation": "Student",
+    "school": "Springfield Elementary",
+    "father": "Chief Wiggum"
+  },
+  {
+    "id": 21,
+    "name": "Patty Bouvier",
+    "img": "patty_bouvier.jpg",
+    "description": "Cynical and sarcastic twin sister of Selma Bouvier.",
+    "age": 40,
+    "occupation": "DMV employee",
+    "sisters": [
+      "Selma Bouvier"
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Selma Bouvier",
+    "img": "selma_bouvier.jpg",
+    "description": "Cynical and sarcastic twin sister of Patty Bouvier.",
+    "age": 40,
+    "occupation": "DMV employee",
+    "sisters": [
+      "Patty Bouvier"
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Kang",
+    "img": "kang.jpg",
+    "description": "Alien from Rigel 7 who often visits Springfield.",
+    "age": "Unknown",
+    "occupation": "Alien invader",
+    "relationships": [
+      {
+        "character": "Homer Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      },
+      {
+        "character": "Marge Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      },
+      {
+        "character": "Bart Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      },
+      {
+        "character": "Lisa Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      },
+      {
+        "character": "Maggie Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Kodos",
+    "img": "kodos.jpg",
+    "description": "Alien from Rigel 7 who often accompanies Kang.",
+    "age": "Unknown",
+    "occupation": "Alien invader",
+    "relationships": [
+      {
+        "character": "Homer Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      },
+      {
+        "character": "Marge Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      },
+      {
+        "character": "Bart Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      },
+      {
+        "character": "Lisa Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      },
+      {
+        "character": "Maggie Simpson",
+        "type": "other",
+        "label": "Lien avec la famille Simpson"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Comic Book Guy",
+    "img": "comic_book_guy.jpg",
+    "description": "Overweight and sarcastic proprietor of the Android's Dungeon comic book store.",
+    "age": 45,
+    "occupation": "Comic book store owner",
+    "store": "Android's Dungeon"
+  },
+  {
+    "id": 26,
+    "name": "Mayor Joe Quimby",
+    "img": "mayor_quimby.jpg",
+    "description": "Corrupt and womanizing mayor of Springfield.",
+    "age": 55,
+    "occupation": "Mayor",
+    "city": "Springfield",
+    "relationships": [
+      {
+        "character": "Homer Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Marge Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Bart Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Lisa Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Maggie Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Ned Flanders",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Maude Flanders",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Montgomery Burns",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Waylon Smithers",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Principal Seymour Skinner",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Apu Nahasapeemapetilon",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Moe Szyslak",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Barney Gumble",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Chief Clancy Wiggum",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Krusty the Clown",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Sideshow Bob",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Nelson Muntz",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Milhouse Van Houten",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Groundskeeper Willie",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Ralph Wiggum",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Patty Bouvier",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Selma Bouvier",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Kang",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Kodos",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Comic Book Guy",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Dr. Julius Hibbert",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Edna Krabappel",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Professor Frink",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Cletus Spuckler",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Brandine Spuckler",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Lenny Leonard",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Carl Carlson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Lionel Hutz",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Troy McClure",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Bleeding Gums Murphy",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Snake Jailbird",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Disco Stu",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Hans Moleman",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Dr. Nick Riviera",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Gil Gunderson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Kent Brockman",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Lunchlady Doris",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Squeaky-Voiced Teen",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Mrs. Krabappel",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Dr. Julius Hibbert",
+    "img": "dr_hibbert.jpg",
+    "description": "Friendly and competent doctor in Springfield.",
+    "age": 50,
+    "occupation": "Doctor",
+    "clinic": "Springfield General Hospital",
+    "relationships": [
+      {
+        "character": "Homer Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Marge Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Bart Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Lisa Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Maggie Simpson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Ned Flanders",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Maude Flanders",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Montgomery Burns",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Waylon Smithers",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Principal Seymour Skinner",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Apu Nahasapeemapetilon",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Moe Szyslak",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Barney Gumble",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Chief Clancy Wiggum",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Krusty the Clown",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Sideshow Bob",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Nelson Muntz",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Milhouse Van Houten",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Groundskeeper Willie",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Ralph Wiggum",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Patty Bouvier",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Selma Bouvier",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Kang",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Kodos",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Comic Book Guy",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Mayor Joe Quimby",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Edna Krabappel",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Professor Frink",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Cletus Spuckler",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Brandine Spuckler",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Lenny Leonard",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Carl Carlson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Lionel Hutz",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Troy McClure",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Bleeding Gums Murphy",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Snake Jailbird",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Disco Stu",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Hans Moleman",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Dr. Nick Riviera",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Gil Gunderson",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Kent Brockman",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Lunchlady Doris",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Squeaky-Voiced Teen",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      },
+      {
+        "character": "Mrs. Krabappel",
+        "type": "other",
+        "label": "Lien avec Springfield"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Edna Krabappel",
+    "img": "edna_krabappel.jpg",
+    "description": "Jaded and cynical fourth-grade teacher at Springfield Elementary School.",
+    "age": 40,
+    "occupation": "Teacher",
+    "school": "Springfield Elementary"
+  },
+  {
+    "id": 29,
+    "name": "Professor Frink",
+    "img": "professor_frink.jpg",
+    "description": "Eccentric and brilliant scientist in Springfield.",
+    "age": 45,
+    "occupation": "Professor",
+    "field": "Science"
+  },
+  {
+    "id": 30,
+    "name": "Cletus Spuckler",
+    "img": "cletus_spuckler.jpg",
+    "description": "Stereotypical hillbilly and father of numerous children.",
+    "age": 35,
+    "occupation": "Farmer",
+    "farm": "Spuckler Farm",
+    "wife": "Brandine Spuckler",
+    "children": [
+      "Cletus Jr.",
+      "Tiffany",
+      "Heather",
+      "Dakota",
+      "Samantha",
+      "Hunter",
+      "Rubella",
+      "Dylan",
+      "Dermot",
+      "Jordan"
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Brandine Spuckler",
+    "img": "brandine_spuckler.jpg",
+    "description": "Wife of Cletus Spuckler and mother of numerous children.",
+    "age": 35,
+    "occupation": "Homemaker",
+    "husband": "Cletus Spuckler",
+    "children": [
+      "Cletus Jr.",
+      "Tiffany",
+      "Heather",
+      "Dakota",
+      "Samantha",
+      "Hunter",
+      "Rubella",
+      "Dylan",
+      "Dermot",
+      "Jordan"
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Lenny Leonard",
+    "img": "lenny_leonard.jpg",
+    "description": "Loyal friend of Homer Simpson and frequent patron of Moe's Tavern.",
+    "age": 42,
+    "occupation": "Unemployed",
+    "hangout": "Moe's Tavern"
+  },
+  {
+    "id": 33,
+    "name": "Carl Carlson",
+    "img": "carl_carlson.jpg",
+    "description": "Loyal friend of Homer Simpson and frequent patron of Moe's Tavern.",
+    "age": 42,
+    "occupation": "Unemployed",
+    "hangout": "Moe's Tavern",
+    "relationships": [
+      {
+        "character": "Lenny Leonard",
+        "type": "friend",
+        "label": "Meilleur ami"
+      },
+      {
+        "character": "Homer Simpson",
+        "type": "friend",
+        "label": "Meilleur ami"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Lionel Hutz",
+    "img": "lionel_hutz.jpg",
+    "description": "Incompetent and sleazy attorney in Springfield.",
+    "age": 45,
+    "occupation": "Lawyer"
+  },
+  {
+    "id": 35,
+    "name": "Troy McClure",
+    "img": "troy_mcclure.jpg",
+    "description": "Faded and washed-up Hollywood actor often seen in educational films and commercials.",
+    "age": 55,
+    "occupation": "Actor"
+  },
+  {
+    "id": 36,
+    "name": "Bleeding Gums Murphy",
+    "img": "bleeding_gums_murphy.jpg",
+    "description": "Jazz musician and mentor to Lisa Simpson.",
+    "age": "Unknown",
+    "occupation": "Musician"
+  },
+  {
+    "id": 37,
+    "name": "Snake Jailbird",
+    "img": "snake_jailbird.jpg",
+    "description": "Frequent criminal and fugitive in Springfield.",
+    "age": 35,
+    "occupation": "Criminal",
+    "crimes": [
+      "Robbery",
+      "Assault",
+      "Kidnapping"
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Disco Stu",
+    "img": "disco_stu.jpg",
+    "description": "Disco-loving resident of Springfield with a passion for everything disco.",
+    "age": 40,
+    "occupation": "Unemployed",
+    "passion": "Disco"
+  },
+  {
+    "id": 39,
+    "name": "Hans Moleman",
+    "img": "hans_moleman.jpg",
+    "description": "Elderly and unfortunate resident of Springfield.",
+    "age": 80,
+    "occupation": "Various odd jobs",
+    "catchphrase": "I'm Hans Moleman, and I hit the pavement."
+  },
+  {
+    "id": 40,
+    "name": "Dr. Nick Riviera",
+    "img": "dr_nick_riviera.jpg",
+    "description": "Inept and unethical quack doctor in Springfield.",
+    "age": 50,
+    "occupation": "Doctor",
+    "clinic": "Dr. Nick's Medical Clinic"
+  },
+  {
+    "id": 41,
+    "name": "Gil Gunderson",
+    "img": "gil_gunderson.jpg",
+    "description": "Pathetic and unlucky salesman often seen struggling with financial problems.",
+    "age": 45,
+    "occupation": "Salesman"
+  },
+  {
+    "id": 42,
+    "name": "Kent Brockman",
+    "img": "kent_brockman.jpg",
+    "description": "Sensationalist and egotistical news anchor in Springfield.",
+    "age": 55,
+    "occupation": "News anchor",
+    "network": "Channel 6"
+  },
+  {
+    "id": 43,
+    "name": "Lunchlady Doris",
+    "img": "lunchlady_doris.jpg",
+    "description": "Gruff and tough lunch lady at Springfield Elementary School.",
+    "age": 60,
+    "occupation": "Lunch lady",
+    "school": "Springfield Elementary"
+  },
+  {
+    "id": 44,
+    "name": "Squeaky-Voiced Teen",
+    "img": "squeaky_voiced_teen.jpg",
+    "description": "Awkward and high-pitched teenager often seen working odd jobs around Springfield.",
+    "age": 16,
+    "occupation": "Various odd jobs"
+  },
+  {
+    "id": 45,
+    "name": "Mrs. Krabappel",
+    "img": "mrs_krabappel.jpg",
+    "description": "Jaded and cynical fourth-grade teacher at Springfield Elementary School.",
+    "age": 40,
+    "occupation": "Teacher",
+    "school": "Springfield Elementary"
+  }
+]
