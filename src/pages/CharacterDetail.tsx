@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-
-import { getCharacters } from "../services/characters";
+// Importez directement votre JSON en tant que données
+import charactersData from "../types/characterDetail.json";
 import CharacterMindMap from "../components/characterMindMap/CharacterMindMap";
 import "./CharacterDetail.css";
 
@@ -10,14 +10,17 @@ export default function CharacterDetail() {
 
   const [showMindMap, setShowMindMap] = useState(false);
 
-  const characters = getCharacters();
+  // Utilisez directement le tableau importé depuis votre fichier JSON
+  const characters = charactersData;
 
   const characterIndex = characters.findIndex((item) => item.id === Number(id));
 
   const character = characters[characterIndex];
 
   if (!character) {
-    return <p>Personnage introuvable !</p>;
+    return (
+      <p className="character-detail-container">Personnage introuvable !</p>
+    );
   }
 
   const previousCharacter = characters[characterIndex - 1];
@@ -35,7 +38,8 @@ export default function CharacterDetail() {
           <Link
             to={`/character/${previousCharacter.id}`}
             className="nav-arrow"
-            aria-label="Personnage précédent">
+            aria-label="Personnage précédent"
+          >
             ‹
           </Link>
         ) : (
@@ -58,17 +62,31 @@ export default function CharacterDetail() {
               <span className="pill">
                 {typeof character.age === "number"
                   ? `${character.age} ans`
-                  : "Âge inconnu"}
+                  : `Âge : ${character.age}`}
               </span>
 
               <span className="pill">
                 {character.occupation ?? "Profession inconnue"}
               </span>
+
+              {/* Affichage de la citation présente dans votre JSON */}
+              {character.quote && (
+                <span className="pill quote-pill">💬 {character.quote}</span>
+              )}
             </div>
 
             <p className="bio">
               <strong>Biographie :</strong> {character.description}
             </p>
+
+            {/* Affichage de l'anecdote présente dans votre JSON */}
+            {character.anekdote && (
+              <div className="extra-info">
+                <p className="anecdote-text">
+                  💡 <strong>Anecdote :</strong> {character.anekdote}
+                </p>
+              </div>
+            )}
           </div>
         </div>
 
@@ -76,7 +94,8 @@ export default function CharacterDetail() {
           <Link
             to={`/character/${nextCharacter.id}`}
             className="nav-arrow"
-            aria-label="Personnage suivant">
+            aria-label="Personnage suivant"
+          >
             ›
           </Link>
         ) : (
@@ -92,7 +111,8 @@ export default function CharacterDetail() {
           type="button"
           className="mindmap-toggle"
           onClick={() => setShowMindMap((previous) => !previous)}
-          aria-expanded={showMindMap}>
+          aria-expanded={showMindMap}
+        >
           {showMindMap ? "Masquer les relations ▲" : "Voir les relations ▼"}
         </button>
 
