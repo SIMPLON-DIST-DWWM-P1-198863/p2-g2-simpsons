@@ -10,8 +10,8 @@ export default function Simpsons() {
       <div className="regroupement">
         <img src={imgSimpsons} alt="Simpson" className="simsponsfamily" />
         <span className="saisonsepisodes">
-          <p>Saison 38</p>
-          <p>épisodes 700+</p>
+          <p className="badge-saison">Saison 38</p>
+          <p className="badge-episodes">700+ épisodes</p>
         </span>
       </div>
     </section>

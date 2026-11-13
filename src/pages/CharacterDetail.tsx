@@ -79,7 +79,7 @@ export default function CharacterDetail() {
             <p className="bio">{character.description}</p>
 
             {character.anekdote && (
-              <p className="anekdote-text">
+              <p className="anecdote-text">
                 <em>Anecdote : {character.anekdote}</em>
               </p>
             )}

@@ -2,6 +2,8 @@ import "./Characters.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Author from "../components/Author/Author";
+import Simpsons from "../components/Simpsons/Simpsons";
+import "../components/Simpsons/Simpsons.css";
 
 interface CharacterData {
   id: number;
@@ -56,8 +58,6 @@ export default function Characters() {
 
   return (
     <div className="characters-carousel-container">
-      <h2>Galerie des Personnages de Springfield</h2>
-
       <div className="carousel-wrapper">
         {/* Bouton Précédent */}
         <button className="carousel-arrow" onClick={prevCharacter}>
@@ -91,9 +91,7 @@ export default function Characters() {
             <p className="description">{centerCharacter.description}</p>
 
             {/* Le bouton d'invitation à voir la fiche complète (où se trouvent les anecdotes) */}
-            <span className="details-hint">
-              🔍 Cliquez pour voir sa fiche complète
-            </span>
+            <span className="details-hint">🔍 Découvrez-moi</span>
           </Link>
 
           {/* 3. Carte de droite (Simple / Latérale) */}
@@ -118,6 +116,7 @@ export default function Characters() {
           {currentIndex + 1} / {characters.length}
         </span>
       </div>
+      <Simpsons />
       <Author />
     </div>
   );
