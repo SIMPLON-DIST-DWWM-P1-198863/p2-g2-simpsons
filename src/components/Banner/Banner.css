@@ -1,0 +1,155 @@
+.home-banner {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: calc(100% - 40px);
+  max-width: 1500px;
+  min-height: 160px;
+  margin: 20px auto;
+  padding: 5px 25px;
+  gap: 15px;
+
+  border: 5px solid transparent;
+  border-radius: 16px;
+
+  background:
+    linear-gradient(rgba(253, 64, 118, 0.4), rgba(253, 64, 118, 0.4))
+      padding-box,
+    linear-gradient(90deg, #fd4076, #ff91b2, #a855f7, #60a5fa, #ffffff, #fd4076)
+      border-box;
+
+  background-size:
+    100% 100%,
+    300% 300%;
+  animation: rainbow-border 6s linear infinite;
+  overflow: hidden;
+}
+
+.text-banner {
+  font-family: Tahoma, Verdana, Geneva, sans-serif;
+}
+
+.text-banner-title {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  margin: 0;
+  font-size: x-large;
+  color: white;
+  font-family: "Excalifont", sans-serif;
+}
+
+@keyframes rainbow-border {
+  0% {
+    background-position:
+      0 0,
+      0% 50%;
+  }
+
+  100% {
+    background-position:
+      0 0,
+      300% 50%;
+  }
+}
+
+/* Images */
+
+.banner-image {
+  width: 85px;
+  height: 125px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.banner-image-left {
+  transform: scaleX(-1);
+}
+
+/* Texte central */
+
+.banner-content {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  color: white;
+  font-family: esc;
+  margin-top: 2em;
+}
+
+.banner-content h1 {
+  margin-bottom: 12px;
+  font-size: clamp(1.4rem, 3vw, 2.3rem);
+}
+
+.banner-content p {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.banner-content span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Bouton de fermeture */
+
+.banner-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  z-index: 2;
+
+  background: transparent;
+  border: none;
+  color: white;
+
+  font-size: 26px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.banner-close:hover {
+  transform: scale(1.15);
+}
+
+/* Responsive */
+
+@media (max-width: 650px) {
+  .home-banner {
+    min-height: 180px;
+    padding: 25px 10px;
+    gap: 8px;
+  }
+
+  .banner-image {
+    width: 60px;
+    height: 110px;
+  }
+
+  .banner-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .banner-content p {
+    font-size: 0.8rem;
+  }
+
+  .banner-content span {
+    font-size: 0.7rem;
+  }
+}
+
+/* Accessibilité */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-banner {
+    animation: none;
+  }
+}

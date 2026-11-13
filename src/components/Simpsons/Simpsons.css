@@ -1,18 +1,24 @@
 .container {
   background-color: #d9d9d9;
-  margin: 2rem 0 2rem 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
+  width: 100vw;
 }
 .description-simpson {
-  padding: 2rem 0 2rem 8rem;
-  font-size: 15px;
+  padding: 2rem 0 2rem;
+  margin-left: 15%;
+  font-size: 16px;
   line-height: 1.6;
   font-family: Tahoma, Verdana, Geneva, sans-serif;
 }
 
+.simpsons-univers {
+  padding-left: 5rem;
+  padding-top: 1rem;
+}
 .saisonsepisodes {
   display: flex;
   flex-direction: row;
@@ -25,10 +31,10 @@
   width: 100%;
 }
 .regroupement {
-  padding: 2rem 8rem 2rem 0;
+  margin-right: 15%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .container {
     flex-direction: column;
     align-items: stretch;
@@ -40,17 +46,19 @@
 
   .description-simpson {
     padding: 1rem;
-    font-size: 15px;
+    font-size: 14px;
     order: 1;
+    margin-left: 0;
   }
 
   .regroupement {
-    padding: 0 1rem 1rem;
+    margin-right: 0;
+    padding: 1rem 1rem 1rem;
   }
 
   span .saisonsepisodes {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.1rem;
     order: 0;
   }
 }

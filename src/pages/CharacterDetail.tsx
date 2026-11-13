@@ -26,7 +26,7 @@ export default function CharacterDetail() {
   return (
     <div className="character-detail-container">
       <Link to="/" className="back-button">
-        ⬅ Retour à l'accueil
+        ⬅ Retour à la liste!
       </Link>
 
       {/* Fiche du personnage */}
